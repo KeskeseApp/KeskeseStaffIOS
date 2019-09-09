@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Hight Rating"; ObjectID = "4dN-04-ISY"; */
+"4dN-04-ISY.text" = "Hight Rating";
+
+/* Class = "UILabel"; text = "Join to Shift"; ObjectID = "7qn-hl-kQt"; */
+"7qn-hl-kQt.text" = "Join to Shift";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "HBh-mU-nBk"; */
+"HBh-mU-nBk.normalTitle" = "Confirm";
+
+/* Class = "UILabel"; text = "Low Rating"; ObjectID = "gE5-yc-5Zv"; */
+"gE5-yc-5Zv.text" = "Low Rating";
+
+/* Class = "UILabel"; text = "Left from shift"; ObjectID = "jdr-fa-Cha"; */
+"jdr-fa-Cha.text" = "Left from shift";

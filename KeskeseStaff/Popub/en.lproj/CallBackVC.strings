@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Уже Иду"; ObjectID = "6GK-1z-2Ji"; */
+"6GK-1z-2Ji.normalTitle" = "Уже Иду";
+
+/* Class = "UILabel"; text = "Олег"; ObjectID = "OIN-Wh-8jD"; */
+"OIN-Wh-8jD.text" = "Олег";
+
+/* Class = "UILabel"; text = "18:02"; ObjectID = "S62-2t-PWy"; */
+"S62-2t-PWy.text" = "18:02";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "rve-Uu-Ymf"; */
+"rve-Uu-Ymf.text" = "3";
+
+/* Class = "UILabel"; text = "Оплата наличными 275₴"; ObjectID = "xEi-5C-p1a"; */
+"xEi-5C-p1a.text" = "Оплата наличными 275₴";

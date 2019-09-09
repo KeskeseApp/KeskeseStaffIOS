@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Высокий Рейтинг"; ObjectID = "4dN-04-ISY"; */
+"4dN-04-ISY.text" = "Высокий Рейтинг";
+
+/* Class = "UILabel"; text = "Присоединился к Смене"; ObjectID = "7qn-hl-kQt"; */
+"7qn-hl-kQt.text" = "Присоединился к Смене";
+
+/* Class = "UIButton"; normalTitle = "Готово"; ObjectID = "HBh-mU-nBk"; */
+"HBh-mU-nBk.normalTitle" = "Готово";
+
+/* Class = "UILabel"; text = "Низкий Рейтинг"; ObjectID = "gE5-yc-5Zv"; */
+"gE5-yc-5Zv.text" = "Низкий Рейтинг";
+
+/* Class = "UILabel"; text = "Вышел со Смены"; ObjectID = "jdr-fa-Cha"; */
+"jdr-fa-Cha.text" = "Вышел со Смены";

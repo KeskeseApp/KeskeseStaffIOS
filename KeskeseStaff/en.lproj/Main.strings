@@ -1,0 +1,114 @@
+
+/* Class = "UINavigationItem"; title = "Столы"; ObjectID = "2Cg-Qz-0WO"; */
+"2Cg-Qz-0WO.title" = "Tables";
+
+/* Class = "UINavigationItem"; title = "Персонал"; ObjectID = "3RP-Jz-SDa"; */
+"3RP-Jz-SDa.title" = "Staff";
+
+/* Class = "UIButton"; normalTitle = "Готово"; ObjectID = "3fC-Sx-9IU"; */
+"3fC-Sx-9IU.normalTitle" = "Confirm";
+
+/* Class = "UITabBarItem"; title = "Столы"; ObjectID = "3oF-kg-eEi"; */
+"3oF-kg-eEi.title" = "Tables";
+
+/* Class = "UIButton"; normalTitle = "Регистрация"; ObjectID = "5jR-uw-hrD"; */
+"5jR-uw-hrD.normalTitle" = "Regestration";
+
+/* Class = "UILabel"; text = "Подтвердить пароль"; ObjectID = "7pJ-c4-K3G"; */
+"7pJ-c4-K3G.text" = "Confirm password";
+
+/* Class = "UILabel"; text = "Почта"; ObjectID = "AhG-Ke-tEj"; */
+"AhG-Ke-tEj.text" = "Email";
+
+/* Class = "UINavigationItem"; title = "Столы"; ObjectID = "C7b-Ct-P99"; */
+"C7b-Ct-P99.title" = "Tables";
+
+/* Class = "UINavigationItem"; title = "Уведомления"; ObjectID = "D1V-th-5J4"; */
+"D1V-th-5J4.title" = "Notification";
+
+/* Class = "UILabel"; text = "Никита Никита"; ObjectID = "EMf-Qc-o7q"; */
+"EMf-Qc-o7q.text" = "Никита Никита";
+
+/* Class = "UILabel"; text = "Место работы : Sushi House "; ObjectID = "Fa5-NE-bGh"; */
+"Fa5-NE-bGh.text" = "Место работы : Sushi House ";
+
+/* Class = "UIButton"; normalTitle = "Войти"; ObjectID = "FtL-SC-TzJ"; */
+"FtL-SC-TzJ.normalTitle" = "Login";
+
+/* Class = "UINavigationItem"; title = "Уведомления"; ObjectID = "J3A-MW-YS2"; */
+"J3A-MW-YS2.title" = "Notification";
+
+/* Class = "UINavigationItem"; title = "Регестрация"; ObjectID = "KAB-0x-CIu"; */
+"KAB-0x-CIu.title" = "Regestration";
+
+/* Class = "UINavigationItem"; title = " Мой профиль"; ObjectID = "L2s-Kk-3yd"; */
+"L2s-Kk-3yd.title" = " Profile";
+
+/* Class = "UILabel"; text = "1231231"; ObjectID = "LOa-ul-Q6B"; */
+"LOa-ul-Q6B.text" = "1231231";
+
+/* Class = "UIViewController"; title = "Вход"; ObjectID = "Lej-5j-XjV"; */
+"Lej-5j-XjV.title" = "Login";
+
+/* Class = "UITabBarItem"; title = "Профиль"; ObjectID = "NyI-El-4JA"; */
+"NyI-El-4JA.title" = "Profile";
+
+/* Class = "UINavigationItem"; title = "Уведомления"; ObjectID = "O3g-YU-4df"; */
+"O3g-YU-4df.title" = "Notification";
+
+/* Class = "UILabel"; text = "Пароль"; ObjectID = "O89-e0-Z8D"; */
+"O89-e0-Z8D.text" = "Password";
+
+/* Class = "UILabel"; text = "Уже есть профиль?"; ObjectID = "OaG-eH-X6G"; */
+"OaG-eH-X6G.text" = "Do you have profile?";
+
+/* Class = "UINavigationItem"; title = "Столы"; ObjectID = "P94-UZ-9W8"; */
+"P94-UZ-9W8.title" = "Tables";
+
+/* Class = "UILabel"; text = "Статус : Администратор"; ObjectID = "U6a-d5-TN6"; */
+"U6a-d5-TN6.text" = "Статус : Администратор";
+
+/* Class = "UILabel"; text = "Пароль"; ObjectID = "UK0-t2-gt0"; */
+"UK0-t2-gt0.text" = "Password";
+
+/* Class = "UITabBarItem"; title = "Уведомления"; ObjectID = "V33-gH-V0y"; */
+"V33-gH-V0y.title" = "Notification";
+
+/* Class = "UILabel"; text = "Уведомления"; ObjectID = "WOc-Kj-qgV"; */
+"WOc-Kj-qgV.text" = "Notification";
+
+/* Class = "UITabBarItem"; title = "Уведомления"; ObjectID = "XdM-UH-QLe"; */
+"XdM-UH-QLe.title" = "Notification";
+
+/* Class = "UITabBarItem"; title = "Персонал"; ObjectID = "bjV-Oo-Za2"; */
+"bjV-Oo-Za2.title" = "Staff";
+
+/* Class = "UILabel"; text = "KESKESE"; ObjectID = "pbI-7z-6ws"; */
+"pbI-7z-6ws.text" = "KESKESE";
+
+/* Class = "UIButton"; normalTitle = "Зарегистрироваться"; ObjectID = "qBs-Vv-VZX"; */
+"qBs-Vv-VZX.normalTitle" = "Confirm";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "qRe-6s-zOX"; */
+"qRe-6s-zOX.title" = " ";
+
+/* Class = "UILabel"; text = "На смене?"; ObjectID = "rto-l3-qaN"; */
+"rto-l3-qaN.text" = "On shift?";
+
+/* Class = "UILabel"; text = "Почта"; ObjectID = "tjd-jR-h93"; */
+"tjd-jR-h93.text" = "Email";
+
+/* Class = "UILabel"; text = "Имя"; ObjectID = "u1L-Qy-qQ1"; */
+"u1L-Qy-qQ1.text" = "Name";
+
+/* Class = "UILabel"; text = "STAFF"; ObjectID = "vgE-Sl-eK6"; */
+"vgE-Sl-eK6.text" = "STAFF";
+
+/* Class = "UILabel"; text = "Выйти из Профиля"; ObjectID = "wt1-Ei-8ko"; */
+"wt1-Ei-8ko.text" = "Logout";
+
+/* Class = "UIButton"; normalTitle = "Войти"; ObjectID = "ycv-Ng-V8T"; */
+"ycv-Ng-V8T.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "KESKESE"; ObjectID = "z9C-jG-FNL"; */
+"z9C-jG-FNL.text" = "KESKESE";
