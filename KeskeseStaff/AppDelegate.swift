@@ -8,13 +8,13 @@
 
 import UIKit
 import FirebaseMessaging
+import SwiftMessages
 import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -51,6 +51,97 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        NotificationCenter.default.post(name: Notification.Name("load"), object: nil)
+        
+//        isOrdered = true
+        //        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        //        let homePage = mainStoryboard.instantiateViewController(withIdentifier: "TabView") as! TabBar
+        //        self.window?.rootViewController = homePage
+        // Print full message.
+        print("pesun \(userInfo)")
+        
+        guard
+            let aps = userInfo[AnyHashable("aps")] as? NSDictionary,
+            let alert = aps["alert"] as? NSDictionary,
+            let body = alert["body"] as? String,
+            let title = alert["title"] as? String
+            //            let aps2 = userInfo[AnyHashable("data1")] as? String
+            
+            else {
+                // handle any error here
+                return
+        }
+        
+        //        print(aps2)
+        
+        if isNotifsEnabled(){
+            notification(title: title, body: body)
+        }
+        
+        completionHandler(UIBackgroundFetchResult.newData)
+    }
+    
+    func notification(title : String, body : String){
+        
+        let view = MessageView.viewFromNib(layout: .cardView)
+//
+//        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let homePage = mainStoryboard.instantiateViewController(withIdentifier: "TabView") as! TabBar
+        // Theme message elements with the warning style.
+        //        view.configureTheme(.warning)
+        view.configureTheme(.info)
+        
+        // Add a drop shadow.
+        view.configureDropShadow()
+        
+        view.button?.isHidden = true
+        
+//        if listIsVisible{
+//            print("FORDANA")
+//            isOrdered = true
+//            self.window?.rootViewController = homePage
+//
+//        }
+        
+        // Set message title, body, and icon. Here, we're overriding the default warning
+        // image with an emoji character.
+        let iconText = ""
+        view.configureContent(title: title, body: body, iconText: iconText)
+        
+        // Increase the external margin around the card. In general, the effect of this setting
+        // depends on how the given layout is constrained to the layout margins.
+        view.layoutMarginAdditions = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+        
+        // Reduce the corner radius (applicable to layouts featuring rounded corners).
+        
+        
+        (view.backgroundView as? CornerRoundingView)?.cornerRadius = 10
+//        view.backgroundColor = Color.dark
+        
+        
+        var config = SwiftMessages.Config()
+        //
+        //        // Slide up from the bottom.
+        config.presentationStyle = .top
+        config.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
+        config.preferredStatusBarStyle = .lightContent
+        
+        // Display in a window at the specified window level: UIWindow.Level.statusBar
+        // displays over the status bar while UIWindow.Level.normal displays under.
+        view.tapHandler = { _ in
+//            isOrdered = true
+//            NotificationCenter.default.post(name: Notification.Name("load"), object: nil)
+//            self.window?.rootViewController = homePage
+            SwiftMessages.hide()
+        }
+        
+        SwiftMessages.show(config : config , view: view)
+        
     }
     
     func keyboard(){

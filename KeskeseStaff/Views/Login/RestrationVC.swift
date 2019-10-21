@@ -21,17 +21,19 @@ class RestrationVC: UIViewController {
     @IBOutlet weak var ProfileImg: UIImageView!
     @IBOutlet weak var confirmPassTF: UITextField!
     
+    var staffType : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        PreferenceUtils.clearData()
         UI()
     }
     
     func UI(){
-        passTF.text = "1234567q"
-        confirmPassTF.text = "1234567q"
-        NameTF.text = "test2"
-        mailTF.text = "test2@gmail.com"
+//        passTF.text = "1234567q"
+//        confirmPassTF.text = "1234567q"
+//        NameTF.text = "test2"
+//        mailTF.text = "test2@gmail.com"
         
         ProfileImg.setRounded()
        
@@ -44,6 +46,16 @@ class RestrationVC: UIViewController {
         singleLine(view: confirmPassTF, lineColor: UIColor.init(white: 33/100, alpha: 1))
     }
     
+    func goNext(){
+        self.performSegue(withIdentifier: staffType, sender: self)
+    }
+    
+    @IBAction func pickImage(_ sender: Any) {
+        viewModel.pickImageCallback = { image in
+            self.ProfileImg.image = image
+        }
+        viewModel.pickImage(viewController: self)
+    }
     
     
     @IBAction func confirmRegBtn(_ sender: Any) {
@@ -53,6 +65,7 @@ class RestrationVC: UIViewController {
         viewModel.pass = passTF.text!
         viewModel.confirmPass = confirmPassTF.text!
         viewModel.view = self.view
+        
         viewModel.chekData()
     }
     

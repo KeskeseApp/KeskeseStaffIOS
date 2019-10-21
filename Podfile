@@ -15,4 +15,5 @@ target 'KeskeseStaff' do
     pod 'XLPagerTabStrip'
     pod 'Kingfisher'
     pod 'NVActivityIndicatorView'
+    pod 'SwiftMessages'
 end

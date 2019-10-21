@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 
-let BASE_URL = "https://hookahgo.app"
+let BASE_URL = "https://keskese.me"
 
 let REGISTER_USER = "\(BASE_URL)/api/customers/add_new_staff/"
 let TOKEN_URL = "\(BASE_URL)/api/customers/api-token-auth/"
@@ -20,8 +20,12 @@ let ALL_STAFF = "\(BASE_URL)/api/customers/staff/"
 let USERS_URL = "\(BASE_URL)/api/customers/user/"
 let WAITER_NOTIF = "\(BASE_URL)/api/customers/waiter_notifications/"
 let ADMIN_NOTIF =  "\(BASE_URL)/api/customers/admin_notifications/"
+let JOIN_TABLE = "\(BASE_URL)/join_table/"
+let STAFF_SETTINGS = "\(BASE_URL)/api/customers/staff_settings/"
 
+let ATTACH_NEW_STAFF_TABlE = "\(BASE_URL)/api/customers/attach_new_staff_table/"
 
+let FEEDBACK = "\(BASE_URL)/api/customers/spot_feedback/"
 
 var header : HTTPHeaders{
     get {
@@ -80,11 +84,70 @@ func postAdminNotif(staff : Int, type : String) -> DataRequest{
                              headers: header)
 }
 
+func postAttachNewStaffTable(old_staff_id : Int, new_staff_id : Int, table_id : Int) -> DataRequest{
+    let link = "\(ATTACH_NEW_STAFF_TABlE)"
+    let params: Parameters = [
+        "old_staff_id" : old_staff_id,
+        "new_staff_id" : new_staff_id,
+        "table_id" : table_id,
+    ]
+    
+    return Alamofire.request(link,
+                             method: .post,
+                             parameters: params,
+                             encoding: JSONEncoding(),
+                             headers: header)
+}
+
+func unassignTable(old_staff_id : Int, table_id : Int) -> DataRequest{
+    let link = "\(ATTACH_NEW_STAFF_TABlE)"
+    let params: Parameters = [
+        "old_staff_id" : old_staff_id,
+        "new_staff_id" : old_staff_id,
+        "table_id" : table_id,
+    ]
+    
+    return Alamofire.request(link,
+                             method: .post,
+                             parameters: params,
+                             encoding: JSONEncoding(),
+                             headers: header)
+}
+
+
+
 func patchWaiterNotif(seen : Bool, elemId : Int) -> DataRequest{
     let link = "\(WAITER_NOTIF)\(elemId)/"
     print("link \(link)")
     let params = [
                 "seen" : seen
+    ]
+    
+    return Alamofire.request(link, method: .patch,
+                             parameters: params , encoding: JSONEncoding(),
+                             headers : header)
+}
+
+func patchFeedback(seen : Bool, elemId : Int) -> DataRequest{
+    let link = "\(FEEDBACK)\(elemId)/"
+    print("link \(link)")
+    let params = [
+                "seen" : seen
+    ]
+    
+    return Alamofire.request(link, method: .patch,
+                             parameters: params , encoding: JSONEncoding(),
+                             headers : header)
+}
+
+func patchStaffSettings(settings : StaffSettings, staffId : Int) -> DataRequest{
+    let link = "\(STAFF_SETTINGS)\(staffId)/"
+    print("link \(link)")
+    let params = [
+        "join_schedule" : settings.join_schedule,
+        "leave_schedule" : settings.leave_schedule,
+        "low_stars" : settings.low_stars,
+        "high_stars" : settings.high_stars
     ]
     
     return Alamofire.request(link, method: .patch,
@@ -120,8 +183,25 @@ func patchTablesForStaff(tables : [Int] , staffID : Int) -> DataRequest{
 
 func getTablesForSpot(spotID : Int) -> DataRequest{
     let link = "\(ALL_TABLES)?spot_id=\(spotID)"
+    
     return Alamofire.request(link, method: .get,
                              parameters: nil, encoding: URLEncoding(),
+                             headers : header)
+}
+
+func getFeedbackForSpot(spotID : Int) -> DataRequest{
+    let link = "\(FEEDBACK)?spot_id=\(spotID)"
+    
+    return Alamofire.request(link, method: .get,
+                             parameters: nil, encoding: URLEncoding(),
+                             headers : header)
+}
+
+func getTablesByCode(code : String) -> DataRequest{
+    let link = "\(ALL_TABLES)?code=\(code)"
+    print("link \(link)")
+    return Alamofire.request(link, method: .get,
+                             parameters: nil, encoding: JSONEncoding(),
                              headers : header)
 }
 
@@ -135,6 +215,14 @@ func getNotifListForStaff(userID : Int) -> DataRequest{
 
 func getAllNotifListForStaff(spotID : Int) -> DataRequest{
     let link = "\(WAITER_NOTIF)?spot_id=\(spotID)"
+    print("link \(link)")
+    return Alamofire.request(link, method: .get,
+                             parameters: nil, encoding: URLEncoding(),
+                             headers : header)
+}
+
+func getJoinTable(tableCode : Int) -> DataRequest{
+    let link = "\(JOIN_TABLE)?code=\(tableCode)"
     print("link \(link)")
     return Alamofire.request(link, method: .get,
                              parameters: nil, encoding: URLEncoding(),
@@ -165,6 +253,16 @@ func getStaff(userID : Int) -> DataRequest{
 
 func getUser(username : String) -> DataRequest{
     let url = "\(USERS_URL)?username=\(username)"
+    return Alamofire.request(url,
+                             method: .get,
+                             parameters: nil,
+                             encoding: URLEncoding(),
+                             headers: header)
+}
+
+func getStaffSettings(staffId : Int) -> DataRequest{
+    let url = "\(STAFF_SETTINGS)?staff_id=\(staffId)"
+    print("zoibav \(url)")
     return Alamofire.request(url,
                              method: .get,
                              parameters: nil,

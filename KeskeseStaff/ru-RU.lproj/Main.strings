@@ -42,7 +42,7 @@
 "KAB-0x-CIu.title" = "Регестрация";
 
 /* Class = "UINavigationItem"; title = " Мой профиль"; ObjectID = "L2s-Kk-3yd"; */
-"L2s-Kk-3yd.title" = " Мой профиль";
+"L2s-Kk-3yd.title" = "Профиль";
 
 /* Class = "UILabel"; text = "1231231"; ObjectID = "LOa-ul-Q6B"; */
 "LOa-ul-Q6B.text" = "1231231";
@@ -73,6 +73,8 @@
 
 /* Class = "UITabBarItem"; title = "Уведомления"; ObjectID = "V33-gH-V0y"; */
 "V33-gH-V0y.title" = "Уведомления";
+
+"4yb-9v-fXW.text" = "Просканируйте QR-Code";
 
 /* Class = "UILabel"; text = "Уведомления"; ObjectID = "WOc-Kj-qgV"; */
 "WOc-Kj-qgV.text" = "Уведомления";
@@ -112,3 +114,9 @@
 
 /* Class = "UILabel"; text = "KESKESE"; ObjectID = "z9C-jG-FNL"; */
 "z9C-jG-FNL.text" = "KESKESE";
+
+"9ji-bB-8Gi.normalTitle" = "Привязать Стол";
+
+"G44-Kq-I4x.text" = "Поддержка";
+
+"9B9-B5-ibu.normalTitle" = "Обновить информацию";

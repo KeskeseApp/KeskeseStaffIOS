@@ -9,6 +9,6 @@
 import Foundation
 
 struct TableInNotif: Codable{
-    var id : Int
+    var id : Int!
     var number : Int
 }

@@ -13,20 +13,53 @@ class TableObj: NSObject {
     @IBOutlet weak var View: TablesVC!
     @IBOutlet weak var MyTableView: MyTablesVC!
     
+    
+    func getStaff(userId : Int){
+            KeskeseStaff.getStaff(userID: userId).responseJSON{
+                (response) in
+                switch response.result {
+                case .success(_):
+                    
+                    let staffSpotUserList = response.data!.createList(type: StaffSpotUser.self)
+                    if !staffSpotUserList.isEmpty{
+                        let staffSpotUser = staffSpotUserList[0]
+                                                    
+                        staff = staffSpotUser.staff
+                        spot = staffSpotUser.spot
+                        
+                        
+                        
+                    }
+                    self.getTables()
+                    
+                    
+                    break
+                case .failure(let error):
+                    self.MyTableView.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
+                    self.MyTableView.emptyV.internetProblrms(view: self.MyTableView.emptyV)
+                    self.MyTableView.stopAnimating()
+                    print(error)
+                    break
+                }
+            }
+        }
+    
     func getTables(){
-        getTablesForSpot(spotID: staff.spot!).responseJSON{
+        getTablesForSpot(spotID: spot.id).responseJSON{
             (response) in
             switch response.result {
             case .success(_):
+                
                 tablesResponse = response.data!.createList(type: TableResponse.self)
+                print("Pizd \(tablesResponse)")
                 myTableResponse = self.sortMyTables(staffId: staff!.id!, tables: tablesResponse)
-                self.View.stopAnimating()
-                self.View.reloadList()
+                self.MyTableView.stopAnimating()
                 
                 break
             case .failure(let error):
-                self.View.stopAnimating()
-                self.View.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
+//                self.View.stopAnimating()
+                self.MyTableView.emptyV.internetProblrms(view: self.MyTableView.emptyV)
+//                self.View.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
                 print(error)
                 break
             }
@@ -35,6 +68,7 @@ class TableObj: NSObject {
     }
     
     func sortMyTables(staffId : Int, tables: [TableResponse]) -> [TableResponse]{
+        self.MyTableView.reloadList()
         return tables.filter({ $0.staff.id == staffId})
     }
     

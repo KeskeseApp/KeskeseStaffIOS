@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotifSettingVC" customModule="KeskeseStaff" customModuleProvider="target">
             <connections>
+                <outlet property="highRateSwitch" destination="yTM-JZ-tYS" id="cZX-rp-Ijd"/>
+                <outlet property="joinShiftSwitch" destination="zP8-I9-dBM" id="6yF-Wp-MYB"/>
+                <outlet property="leftShiftSwich" destination="hfq-LF-zZC" id="Z6q-Pt-j2K"/>
+                <outlet property="lowRateSwitch" destination="YGw-vS-rh1" id="gvz-M1-Dl5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,6 +44,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yTM-JZ-tYS">
                                                     <rect key="frame" x="315" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="highRateSwitch:" destination="-1" eventType="valueChanged" id="P8I-Fo-0Dt"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </stackView>
@@ -54,6 +61,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGw-vS-rh1">
                                                     <rect key="frame" x="315" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="lowRateSwitch:" destination="-1" eventType="valueChanged" id="XhG-Vi-bJp"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </stackView>
@@ -68,6 +78,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zP8-I9-dBM">
                                                     <rect key="frame" x="315" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="joinShiftSwitch:" destination="-1" eventType="valueChanged" id="CUZ-05-Cde"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </stackView>
@@ -82,6 +95,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfq-LF-zZC">
                                                     <rect key="frame" x="315" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="leftShiftSwitch:" destination="-1" eventType="valueChanged" id="a5W-NS-vgF"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </stackView>

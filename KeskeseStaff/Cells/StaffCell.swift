@@ -12,5 +12,8 @@ class StaffCell: UICollectionViewCell {
     @IBOutlet weak var cellBGView: UIView!
     @IBOutlet weak var smallNameLbl: UILabel!
     @IBOutlet weak var staffImage: UIImageView!
+    @IBOutlet weak var imageBgView: UIView!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var onlineIndicatorView: UIView!
     
 }

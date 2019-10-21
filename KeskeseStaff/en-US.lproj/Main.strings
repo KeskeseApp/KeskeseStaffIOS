@@ -42,7 +42,7 @@
 "KAB-0x-CIu.title" = "Regestration";
 
 /* Class = "UINavigationItem"; title = " Мой профиль"; ObjectID = "L2s-Kk-3yd"; */
-"L2s-Kk-3yd.title" = " Profile";
+"L2s-Kk-3yd.title" = "Profile";
 
 /* Class = "UILabel"; text = "1231231"; ObjectID = "LOa-ul-Q6B"; */
 "LOa-ul-Q6B.text" = "1231231";

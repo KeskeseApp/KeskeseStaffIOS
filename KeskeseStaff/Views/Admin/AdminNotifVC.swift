@@ -14,27 +14,47 @@ class AdminNotifVC: UIViewController, UITableViewDelegate , UITableViewDataSourc
 
     
     @IBOutlet var ModelObj: AdminNotifObj!
+    @IBOutlet weak var emptyV: EmptyView!
     
     @IBOutlet weak var tableView: UITableView!
     
+    var refresh : UIRefreshControl!
+    
+    @IBOutlet weak var Activity: UIActivityIndicatorView!
     var notifList = [AdminNotif]()
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         
-        return IndicatorInfo(title : "Персонал")
+        return IndicatorInfo(title : NSLocalizedString("Staff", comment: ""))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         tableView.register(UINib(nibName: "NotifCell", bundle: nil), forCellReuseIdentifier: "NotifCell")
+        
+        refresh = UIRefreshControl()
+        refresh.backgroundColor = UIColor.clear
+        refresh.addTarget(self, action: #selector(AdminNotifVC.refreshPage), for: UIControl.Event.valueChanged)
+        
+        tableView.addSubview(refresh)
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        Activity.startAnimating()
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshPage), name: NSNotification.Name(rawValue: "load"), object: nil)
         ModelObj.getData()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+          super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "load"), object: nil)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        emptyView(index: ModelObj.numberOfRowsInSection(selections: section), view: emptyV)
         return ModelObj.numberOfRowsInSection(selections: section)
     }
     
@@ -43,11 +63,13 @@ class AdminNotifVC: UIViewController, UITableViewDelegate , UITableViewDataSourc
         let data = notifList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotifCell", for: indexPath) as!  NotifCell
         animate(cell: cell)
-//        cell.indexLbl.text = String(data.staff)
+        cell.indexBG.isHidden = true
         cell.timeLbl.text = data.time
-        cell.typeLbl.text = "Вышел на Смену"
+//        cell.typeLbl.text = "Вышел на Смену"
 //            data.type
-        waiterNotifs(type: data.type, view: cell.BG, statys: cell.statysLbl, seen: data.seen)
+        cell.namelbl.isHidden = false
+        cell.namelbl.text = data.staff.name
+        waiterNotifs(type: data.type, view: cell.BG, statys: cell.statysLbl, seen: data.seen, button: cell.confirmBtn)
         cell.indexBG.borderColorV = cell.BG.borderColorV
         
         return cell
@@ -59,7 +81,7 @@ class AdminNotifVC: UIViewController, UITableViewDelegate , UITableViewDataSourc
 //        cell.adminNotifData = notifList[indexPath.row]
 //        presentPopup(popupVC: cell, mainVC: self)
         let data = notifList[indexPath.row]
-        
+        startAnimating(type : NVActivityIndicatorType.ballPulseSync)
         let successFunc = {
             self.notifList[indexPath.row].seen = !data.seen
             self.tableView.reloadData()
@@ -74,6 +96,12 @@ class AdminNotifVC: UIViewController, UITableViewDelegate , UITableViewDataSourc
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.refresh.endRefreshing()
+        
+    }
+    
+    @objc func refreshPage(){
+        ModelObj.getData()
     }
 
 }

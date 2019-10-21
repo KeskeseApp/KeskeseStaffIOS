@@ -5,3 +5,31 @@
   Created by NI Vol on 9/7/19.
   Copyright © 2019 Keskese. All rights reserved.
 */
+"Cancel" = "Відмінити";
+"CallA" = "Покликати Адміністратора";
+"CallW" = "Покликати Офіціанта";
+"PayC" = "Розрахунок Готівкою";
+"PayCard" = "Розрахунок Карткою";
+"Busy" = "Зайнятий";
+"Free" = "Вільний";
+"New Order" = "Нове Замовлення";
+"Join Shedule" = "Приєднався до Зміни";
+"Left Shedule" = "Вийшов зі Зміни";
+"Rate" = "Оцінка";
+"Staff" = "Персонал";
+"Guest" = "Гість";
+"Status" = "Статус";
+"Admin" = "Адміністратор";
+"Waiter" = "Офіціант";
+"Job" = "Місце роботи";
+"Table" = "Стіл";
+"Scan QR-Code" = "Проскануйте QR-Code";
+"Log out" = "Вийти?";
+
+"The list is empty" = "Список пустий";
+"Seen" = "Переглянути";
+"Close order" = "Закрити стіл";
+"Feedback" = "Відгуки";
+"Name" = "Им'я";
+"Phone" = "Телефон";
+

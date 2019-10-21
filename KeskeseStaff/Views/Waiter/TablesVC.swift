@@ -40,6 +40,7 @@ class TablesVC: UIViewController , UICollectionViewDelegate , UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let data = tablesResponse[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tableElemCell", for: indexPath) as! tableElemCell
+        animateCollectionCell(cell: cell)
         cell.statusLbl.backgroundColor = model.viewColor(data: data)
         cell.tableNumber.backgroundColor = model.viewColor(data: data)
         cell.tableNumber.text = String(data.table.number)

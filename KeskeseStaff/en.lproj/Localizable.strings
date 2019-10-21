@@ -6,4 +6,29 @@
   Copyright © 2019 Keskese. All rights reserved.
 */
 "Cancel" = "Cancel";
-
+"CallA" = "Call Administrator";
+"CallW" = "Call Waiter";
+"PayC" = "Cash Payment";
+"PayCard" = "Card Payment";
+"Busy" = "Busy";
+"Free" = "Open";
+"New Order" = "New Order";
+"Join Shedule" = "Join Shift";
+"Left Shedule" = "Left Shift";
+"Rate" = "Rate";
+"Staff" = "Staff";
+"Guest" = "Guest";
+"Status" = "Status";
+"Admin" = "Administrator";
+"Waiter" = "Waiter";
+"Job" = "Job";
+"Table" = "Table";
+"Scan QR-Code" = "Scan QR-Code";
+"Log out" = "Log out?";
+"The list is empty" = "The list is empty";
+"Internet problems" = "Internet problems";
+"Seen" = "Seen";
+"Close order" = "Close order";
+"Feedback" = "Feedback";
+"Name" = "Name";
+"Phone" = "Phone";

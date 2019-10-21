@@ -42,7 +42,7 @@
 "KAB-0x-CIu.title" = "Regestration";
 
 /* Class = "UINavigationItem"; title = " Мой профиль"; ObjectID = "L2s-Kk-3yd"; */
-"L2s-Kk-3yd.title" = " Profile";
+"L2s-Kk-3yd.title" = "Profile";
 
 /* Class = "UILabel"; text = "1231231"; ObjectID = "LOa-ul-Q6B"; */
 "LOa-ul-Q6B.text" = "1231231";
@@ -105,10 +105,16 @@
 "vgE-Sl-eK6.text" = "STAFF";
 
 /* Class = "UILabel"; text = "Выйти из Профиля"; ObjectID = "wt1-Ei-8ko"; */
-"wt1-Ei-8ko.text" = "Logout";
+"wt1-Ei-8ko.text" = "Log out";
 
 /* Class = "UIButton"; normalTitle = "Войти"; ObjectID = "ycv-Ng-V8T"; */
 "ycv-Ng-V8T.normalTitle" = "Login";
 
 /* Class = "UILabel"; text = "KESKESE"; ObjectID = "z9C-jG-FNL"; */
 "z9C-jG-FNL.text" = "KESKESE";
+
+"9ji-bB-8Gi.normalTitle" = "Assign table";
+
+"G44-Kq-I4x.text" = "Support";
+
+"9B9-B5-ibu.normalTitle" = "Update Information";

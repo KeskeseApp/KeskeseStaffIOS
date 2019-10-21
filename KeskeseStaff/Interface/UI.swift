@@ -17,6 +17,14 @@ func animate(cell:UITableViewCell) {
         
     }, completion: nil)
 }
+func animateCollectionCell(cell:UICollectionViewCell) {
+    let view = cell.contentView
+    view.layer.opacity = 0.5
+    UIView.animate(withDuration: 0.5, delay: 0, options: [.allowUserInteraction, .curveEaseInOut], animations: { () -> Void in
+        view.layer.opacity = 1
+        
+    }, completion: nil)
+}
 
 func presentPopup(popupVC : UIViewController, mainVC : UIViewController){
     popupVC.modalTransitionStyle = .crossDissolve

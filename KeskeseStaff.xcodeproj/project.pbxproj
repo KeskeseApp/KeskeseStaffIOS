@@ -3,20 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A8DA4BC80519C9D329EC10C5 /* Pods_KeskeseStaff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1583B6EAD16C817B463D4A4 /* Pods_KeskeseStaff.framework */; };
+		EF0168102335289A007C34A1 /* ReloadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF01680F2335289A007C34A1 /* ReloadView.xib */; };
+		EF0AD3772348D88D00D5870D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF0AD3762348D88D00D5870D /* GoogleService-Info.plist */; };
 		EF0E25382301BB25003D65B3 /* tableElemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E25362301BB25003D65B3 /* tableElemCell.swift */; };
 		EF0E25392301BB25003D65B3 /* tableElemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0E25372301BB25003D65B3 /* tableElemCell.xib */; };
 		EF0E253C2302EC1C003D65B3 /* NotifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E253A2302EC1C003D65B3 /* NotifCell.swift */; };
 		EF0E253D2302EC1C003D65B3 /* NotifCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0E253B2302EC1C003D65B3 /* NotifCell.xib */; };
+		EF0E253F2302EDA6003D65B3 /* NotiffVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E253E2302EDA6003D65B3 /* NotiffVC.swift */; };
 		EF0E2541230316E1003D65B3 /* WaiterNotif.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E2540230316E1003D65B3 /* WaiterNotif.swift */; };
 		EF0E254323043011003D65B3 /* TablesElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E254223043011003D65B3 /* TablesElem.swift */; };
 		EF0E254723043BC9003D65B3 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E254623043BC9003D65B3 /* Enums.swift */; };
 		EF0E25492305B8A1003D65B3 /* TablesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E25482305B8A1003D65B3 /* TablesVC.swift */; };
 		EF0E254B2306DACA003D65B3 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E254A2306DACA003D65B3 /* ProfileVC.swift */; };
+		EF16D21D232FD4E5002D73EE /* SupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16D21C232FD4E5002D73EE /* SupportVC.swift */; };
+		EF16D21F232FFAC0002D73EE /* StaffSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16D21E232FFAC0002D73EE /* StaffSettings.swift */; };
+		EF16D223233145E0002D73EE /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16D222233145E0002D73EE /* EmptyView.swift */; };
+		EF16D22423323467002D73EE /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF16D22623323467002D73EE /* EmptyView.xib */; };
 		EF4F70BD231594BA00EED7F8 /* PreferenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F70BC231594BA00EED7F8 /* PreferenceUtils.swift */; };
 		EF4F70BF2315DDD700EED7F8 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F70BE2315DDD700EED7F8 /* StartVC.swift */; };
 		EF4F70C32317B09800EED7F8 /* SettingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F70C22317B09800EED7F8 /* SettingList.swift */; };
@@ -27,7 +34,6 @@
 		EF4F70D0231A9D5400EED7F8 /* ParametersEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F70CF231A9D5300EED7F8 /* ParametersEncoding.swift */; };
 		EF4F70D2231AB2E600EED7F8 /* WaiterNotifsForAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F70D1231AB2E600EED7F8 /* WaiterNotifsForAdmin.swift */; };
 		EF4F70D62320063E00EED7F8 /* NotifSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F70D42320063E00EED7F8 /* NotifSettingVC.swift */; };
-		EF5CCEEB22FB326A00A4148A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF5CCEEA22FB326A00A4148A /* GoogleService-Info.plist */; };
 		EF5CCF0722FDCD2D00A4148A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5CCF0622FDCD2C00A4148A /* User.swift */; };
 		EF84C441232304B9006FDA35 /* CallBackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF84C443232304B9006FDA35 /* CallBackVC.xib */; };
 		EF84C45623230ACB006FDA35 /* NotifSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF84C45823230ACB006FDA35 /* NotifSettingVC.xib */; };
@@ -79,9 +85,13 @@
 		EFB3CC8022F8235200036F96 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3CC7F22F8235200036F96 /* CurrentData.swift */; };
 		EFB3CC8222F8238E00036F96 /* StaffElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3CC8122F8238E00036F96 /* StaffElem.swift */; };
 		EFB3CC8422F98EC600036F96 /* StaffTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3CC8322F98EC600036F96 /* StaffTable.swift */; };
+		EFC69B0D233A5FC600CC0BF0 /* FeedBackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC69B0C233A5FC600CC0BF0 /* FeedBackCell.swift */; };
+		EFC69B0F233A61E600CC0BF0 /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC69B0E233A61E600CC0BF0 /* FeedbackVC.swift */; };
+		EFC69B11233A62C500CC0BF0 /* FeedbackElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC69B10233A62C500CC0BF0 /* FeedbackElem.swift */; };
 		EFF1E37223231128007D9E3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFF1E37423231128007D9E3E /* Localizable.strings */; };
 		EFF1E37D23239DC3007D9E3E /* AdminTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF1E37C23239DC3007D9E3E /* AdminTabs.swift */; };
 		EFF1E37F23239E08007D9E3E /* WaiterTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF1E37E23239E08007D9E3E /* WaiterTabs.swift */; };
+		EFF1E3832328EC21007D9E3E /* ScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF1E3822328EC21007D9E3E /* ScannerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +115,8 @@
 		6E74C17207EAA9D9201DAB17 /* Pods-KeskeseStaff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeskeseStaff.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeskeseStaff/Pods-KeskeseStaff.debug.xcconfig"; sourceTree = "<group>"; };
 		A1583B6EAD16C817B463D4A4 /* Pods_KeskeseStaff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeskeseStaff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50D8D564116B2A5BBF6DC50 /* Pods-KeskeseStaff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeskeseStaff.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeskeseStaff/Pods-KeskeseStaff.release.xcconfig"; sourceTree = "<group>"; };
+		EF01680F2335289A007C34A1 /* ReloadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReloadView.xib; sourceTree = "<group>"; };
+		EF0AD3762348D88D00D5870D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF0E25362301BB25003D65B3 /* tableElemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableElemCell.swift; sourceTree = "<group>"; };
 		EF0E25372301BB25003D65B3 /* tableElemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableElemCell.xib; sourceTree = "<group>"; };
 		EF0E253A2302EC1C003D65B3 /* NotifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifCell.swift; sourceTree = "<group>"; };
@@ -113,8 +125,15 @@
 		EF0E2540230316E1003D65B3 /* WaiterNotif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterNotif.swift; sourceTree = "<group>"; };
 		EF0E254223043011003D65B3 /* TablesElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesElem.swift; sourceTree = "<group>"; };
 		EF0E254623043BC9003D65B3 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		EF0E25482305B8A1003D65B3 /* TablesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesVC.swift; sourceTree = "<group>"; };
+		EF0E25482305B8A1003D65B3 /* TablesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TablesVC.swift; path = ../Waiter/TablesVC.swift; sourceTree = "<group>"; };
 		EF0E254A2306DACA003D65B3 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		EF16D21C232FD4E5002D73EE /* SupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
+		EF16D21E232FFAC0002D73EE /* StaffSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffSettings.swift; sourceTree = "<group>"; };
+		EF16D222233145E0002D73EE /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		EF16D22523323467002D73EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EmptyView.xib; sourceTree = "<group>"; };
+		EF16D22823323471002D73EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EmptyView.strings; sourceTree = "<group>"; };
+		EF16D22A23323473002D73EE /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/EmptyView.strings"; sourceTree = "<group>"; };
+		EF16D22C23323475002D73EE /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/EmptyView.strings; sourceTree = "<group>"; };
 		EF4F70BC231594BA00EED7F8 /* PreferenceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceUtils.swift; sourceTree = "<group>"; };
 		EF4F70BE2315DDD700EED7F8 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		EF4F70C22317B09800EED7F8 /* SettingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingList.swift; sourceTree = "<group>"; };
@@ -125,7 +144,6 @@
 		EF4F70CF231A9D5300EED7F8 /* ParametersEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoding.swift; sourceTree = "<group>"; };
 		EF4F70D1231AB2E600EED7F8 /* WaiterNotifsForAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterNotifsForAdmin.swift; sourceTree = "<group>"; };
 		EF4F70D42320063E00EED7F8 /* NotifSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifSettingVC.swift; sourceTree = "<group>"; };
-		EF5CCEEA22FB326A00A4148A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF5CCF0622FDCD2C00A4148A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EF5CCF0822FDD66B00A4148A /* KeskeseStaff.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeskeseStaff.entitlements; sourceTree = "<group>"; };
 		EF84C43723230009006FDA35 /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -141,7 +159,6 @@
 		EF84C46223230D5F006FDA35 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "en-US"; path = "en-US.lproj/CallBackVC.xib"; sourceTree = "<group>"; };
 		EF84C46323230EBE006FDA35 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/NotifSettingVC.strings; sourceTree = "<group>"; };
 		EF84C46423230EBE006FDA35 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
-		EF84C46523230EBE006FDA35 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EF84C46623230EBE006FDA35 /* uk */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = uk; path = uk.lproj/CallBackVC.xib; sourceTree = "<group>"; };
 		EF941B9F230EA2AC0004F1B8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EF941BA1230F30770004F1B8 /* NotifListObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifListObj.swift; sourceTree = "<group>"; };
@@ -198,6 +215,9 @@
 		EFB3CC7F22F8235200036F96 /* CurrentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentData.swift; sourceTree = "<group>"; };
 		EFB3CC8122F8238E00036F96 /* StaffElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffElem.swift; sourceTree = "<group>"; };
 		EFB3CC8322F98EC600036F96 /* StaffTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffTable.swift; sourceTree = "<group>"; };
+		EFC69B0C233A5FC600CC0BF0 /* FeedBackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackCell.swift; sourceTree = "<group>"; };
+		EFC69B0E233A61E600CC0BF0 /* FeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
+		EFC69B10233A62C500CC0BF0 /* FeedbackElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackElem.swift; sourceTree = "<group>"; };
 		EFF1E37323231128007D9E3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EFF1E3752323112E007D9E3E /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EFF1E3762323112F007D9E3E /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -205,6 +225,7 @@
 		EFF1E37C23239DC3007D9E3E /* AdminTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabs.swift; sourceTree = "<group>"; };
 		EFF1E37E23239E08007D9E3E /* WaiterTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterTabs.swift; sourceTree = "<group>"; };
 		EFF1E38123263D60007D9E3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EFF1E3822328EC21007D9E3E /* ScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,9 +283,11 @@
 			isa = PBXGroup;
 			children = (
 				EFB3CC7722F44D2A00036F96 /* StaffVC.swift */,
+				EF0E25482305B8A1003D65B3 /* TablesVC.swift */,
 				EF4F70C92317BF5000EED7F8 /* AdminNotifVC.swift */,
 				EF4F70CD2317DD4F00EED7F8 /* RootForAdminNotifVC.swift */,
 				EF4F70D1231AB2E600EED7F8 /* WaiterNotifsForAdmin.swift */,
+				EFC69B0E233A61E600CC0BF0 /* FeedbackVC.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -273,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				EF0E253E2302EDA6003D65B3 /* NotiffVC.swift */,
-				EF0E25482305B8A1003D65B3 /* TablesVC.swift */,
 				EFB22E4E230E02DC008D8BF3 /* MyTablesVC.swift */,
 				EFB22E4C230DDE18008D8BF3 /* RootForTableVC.swift */,
 			);
@@ -285,6 +307,7 @@
 			children = (
 				EF4F70C22317B09800EED7F8 /* SettingList.swift */,
 				EF0E254A2306DACA003D65B3 /* ProfileVC.swift */,
+				EF16D21C232FD4E5002D73EE /* SupportVC.swift */,
 			);
 			path = Setings;
 			sourceTree = "<group>";
@@ -296,6 +319,9 @@
 				EF84C443232304B9006FDA35 /* CallBackVC.xib */,
 				EF4F70D42320063E00EED7F8 /* NotifSettingVC.swift */,
 				EF84C45823230ACB006FDA35 /* NotifSettingVC.xib */,
+				EF16D22623323467002D73EE /* EmptyView.xib */,
+				EF16D222233145E0002D73EE /* EmptyView.swift */,
+				EF01680F2335289A007C34A1 /* ReloadView.xib */,
 			);
 			path = Popub;
 			sourceTree = "<group>";
@@ -310,6 +336,8 @@
 				EF0E254223043011003D65B3 /* TablesElem.swift */,
 				EFB22E50230E06EC008D8BF3 /* TableInNotif.swift */,
 				EF4F70C42317BE4E00EED7F8 /* AdminNotif.swift */,
+				EF16D21E232FFAC0002D73EE /* StaffSettings.swift */,
+				EFC69B10233A62C500CC0BF0 /* FeedbackElem.swift */,
 			);
 			path = ObjectsModel;
 			sourceTree = "<group>";
@@ -352,11 +380,11 @@
 				EFB3CABB22F19C5600036F96 /* Animations */,
 				EF95DA0E22F0527700346B29 /* AppDelegate.swift */,
 				EF95DA1222F0527700346B29 /* Main.storyboard */,
-				EF5CCEEA22FB326A00A4148A /* GoogleService-Info.plist */,
 				EF95DA1522F0527800346B29 /* Assets.xcassets */,
 				EF95DA1722F0527800346B29 /* LaunchScreen.storyboard */,
 				EF95DA1A22F0527800346B29 /* Info.plist */,
 				EFB3CC7322F241AE00036F96 /* Network.swift */,
+				EF0AD3762348D88D00D5870D /* GoogleService-Info.plist */,
 				EF4F70CF231A9D5300EED7F8 /* ParametersEncoding.swift */,
 				EFF1E37423231128007D9E3E /* Localizable.strings */,
 			);
@@ -478,6 +506,7 @@
 				EFB3CC6F22F23A7400036F96 /* Login */,
 				EFF1E37C23239DC3007D9E3E /* AdminTabs.swift */,
 				EFF1E37E23239E08007D9E3E /* WaiterTabs.swift */,
+				EFF1E3822328EC21007D9E3E /* ScannerVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -511,6 +540,7 @@
 				EF0E25372301BB25003D65B3 /* tableElemCell.xib */,
 				EF0E253A2302EC1C003D65B3 /* NotifCell.swift */,
 				EF0E253B2302EC1C003D65B3 /* NotifCell.xib */,
+				EFC69B0C233A5FC600CC0BF0 /* FeedBackCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -614,7 +644,7 @@
 				};
 			};
 			buildConfigurationList = EF95DA0622F0527700346B29 /* Build configuration list for PBXProject "KeskeseStaff" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -643,15 +673,17 @@
 			files = (
 				EF95DA1922F0527800346B29 /* LaunchScreen.storyboard in Resources */,
 				EFF1E37223231128007D9E3E /* Localizable.strings in Resources */,
-				EF5CCEEB22FB326A00A4148A /* GoogleService-Info.plist in Resources */,
+				EF0168102335289A007C34A1 /* ReloadView.xib in Resources */,
 				EFB3CC5F22F1B00200036F96 /* plus.json in Resources */,
 				EF0E253D2302EC1C003D65B3 /* NotifCell.xib in Resources */,
 				EF95DA1622F0527800346B29 /* Assets.xcassets in Resources */,
 				EFB3CA7922F05BEE00036F96 /* IQKeyboardManager.bundle in Resources */,
 				EF0E25392301BB25003D65B3 /* tableElemCell.xib in Resources */,
 				EF84C441232304B9006FDA35 /* CallBackVC.xib in Resources */,
+				EF16D22423323467002D73EE /* EmptyView.xib in Resources */,
 				EF95DA1422F0527700346B29 /* Main.storyboard in Resources */,
 				EF84C45623230ACB006FDA35 /* NotifSettingVC.xib in Resources */,
+				EF0AD3772348D88D00D5870D /* GoogleService-Info.plist in Resources */,
 				EFB3CC6122F1B10B00036F96 /* profile.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -690,6 +722,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
@@ -708,6 +741,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
@@ -749,8 +783,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF941BA2230F30770004F1B8 /* NotifListObj.swift in Sources */,
+				EF16D223233145E0002D73EE /* EmptyView.swift in Sources */,
 				EFB22E51230E06EC008D8BF3 /* TableInNotif.swift in Sources */,
 				EF941BA0230EA2AC0004F1B8 /* Colors.swift in Sources */,
+				EFC69B0D233A5FC600CC0BF0 /* FeedBackCell.swift in Sources */,
 				EFB3CC7222F23B7900036F96 /* ChoiceLoginMethodVC.swift in Sources */,
 				EFB3CC8022F8235200036F96 /* CurrentData.swift in Sources */,
 				EF4F70CC2317BF9C00EED7F8 /* AdminNotifObj.swift in Sources */,
@@ -759,10 +795,12 @@
 				EFB3CA7A22F05BEE00036F96 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				EF5CCF0722FDCD2D00A4148A /* User.swift in Sources */,
 				EF4F70D0231A9D5400EED7F8 /* ParametersEncoding.swift in Sources */,
+				EFC69B11233A62C500CC0BF0 /* FeedbackElem.swift in Sources */,
 				EF4F70C52317BE4E00EED7F8 /* AdminNotif.swift in Sources */,
 				EFB3CC6A22F2288900036F96 /* LoginVC.swift in Sources */,
 				EFB3CA7522F05BEE00036F96 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				EF95DA0F22F0527700346B29 /* AppDelegate.swift in Sources */,
+				EFF1E3832328EC21007D9E3E /* ScannerVC.swift in Sources */,
 				EFB3CA7122F05BEE00036F96 /* IQPreviousNextView.swift in Sources */,
 				EFB3CC7D22F4610400036F96 /* TablesCell.swift in Sources */,
 				EFB3CA7F22F05BEE00036F96 /* IQUIView+Hierarchy.swift in Sources */,
@@ -788,6 +826,7 @@
 				EFB3CA7B22F05BEE00036F96 /* IQKeyboardManager.swift in Sources */,
 				EF4F70CA2317BF5000EED7F8 /* AdminNotifVC.swift in Sources */,
 				EF4F70CE2317DD4F00EED7F8 /* RootForAdminNotifVC.swift in Sources */,
+				EF16D21D232FD4E5002D73EE /* SupportVC.swift in Sources */,
 				EFB3CA7322F05BEE00036F96 /* IQBarButtonItem.swift in Sources */,
 				EFB3CA7C22F05BEE00036F96 /* IQUIScrollView+Additions.swift in Sources */,
 				EF4F70C32317B09800EED7F8 /* SettingList.swift in Sources */,
@@ -797,10 +836,12 @@
 				EFF1E37F23239E08007D9E3E /* WaiterTabs.swift in Sources */,
 				EF0E254323043011003D65B3 /* TablesElem.swift in Sources */,
 				EFB3CA7222F05BEE00036F96 /* IQTitleBarButtonItem.swift in Sources */,
+				EF16D21F232FFAC0002D73EE /* StaffSettings.swift in Sources */,
 				EFB22E4F230E02DC008D8BF3 /* MyTablesVC.swift in Sources */,
 				EFB3CC8222F8238E00036F96 /* StaffElem.swift in Sources */,
 				EF0E25382301BB25003D65B3 /* tableElemCell.swift in Sources */,
 				EFB3CA5522F055E100036F96 /* RestrationVC.swift in Sources */,
+				EFC69B0F233A61E600CC0BF0 /* FeedbackVC.swift in Sources */,
 				EFB3CA5722F0563C00036F96 /* UI.swift in Sources */,
 				EFB3CA7422F05BEE00036F96 /* IQToolbar.swift in Sources */,
 				EF0E254723043BC9003D65B3 /* Enums.swift in Sources */,
@@ -844,6 +885,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EF16D22623323467002D73EE /* EmptyView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF16D22523323467002D73EE /* Base */,
+				EF16D22823323471002D73EE /* en */,
+				EF16D22A23323473002D73EE /* ru-RU */,
+				EF16D22C23323475002D73EE /* uk */,
+			);
+			name = EmptyView.xib;
+			sourceTree = "<group>";
+		};
 		EF84C443232304B9006FDA35 /* CallBackVC.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -884,7 +936,6 @@
 				EF95DA1822F0527800346B29 /* Base */,
 				EF84C43823230009006FDA35 /* ru-RU */,
 				EF84C46123230D5F006FDA35 /* en-US */,
-				EF84C46523230EBE006FDA35 /* uk */,
 				EFF1E38123263D60007D9E3E /* en */,
 			);
 			name = LaunchScreen.storyboard;
@@ -1029,17 +1080,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = KeskeseStaff/KeskeseStaff.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 933F83CUZH;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 8F4UB334XT;
 				INFOPLIST_FILE = KeskeseStaff/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KeskeseStaff.KeskeseStaff;
+				PRODUCT_BUNDLE_IDENTIFIER = Keskese.KeskeseStaff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = KeskeseStaffDEV;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1053,17 +1106,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = KeskeseStaff/KeskeseStaff.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 933F83CUZH;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 8F4UB334XT;
 				INFOPLIST_FILE = KeskeseStaff/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KeskeseStaff.KeskeseStaff;
+				PRODUCT_BUNDLE_IDENTIFIER = Keskese.KeskeseStaff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = KeskeseStaffDEV;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

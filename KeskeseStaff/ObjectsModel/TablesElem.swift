@@ -12,6 +12,7 @@ import Foundation
 struct TableResponse : Codable{
     var table: Table
     var staff: StaffUserInTable
+    var spot : SpotInTable
 }
 
 struct Table : Codable{
@@ -21,4 +22,11 @@ struct Table : Codable{
     var table_status: String
     var order_status: String
     var emotion: String
+}
+
+struct SpotInTable : Codable {
+    var id : Int
+    var name : String
+    var address : String
+    var logo : String
 }

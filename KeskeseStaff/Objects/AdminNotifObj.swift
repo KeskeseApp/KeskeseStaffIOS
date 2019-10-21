@@ -13,18 +13,19 @@ class AdminNotifObj: NSObject {
     
     func getData(){
         
-        getNotifListForAdmin(spotID: staff.spot!).responseJSON{
+        getNotifListForAdmin(spotID: spot.id).responseJSON{
             (response) in
             switch response.result {
             case .success(_):
                 self.View.notifList = response.data!.createList(type: AdminNotif.self).sorted(by: { $0.id > $1.id})
-                
+                self.View.Activity.stopAnimating()
                 self.View.stopAnimating()
                 self.View.reloadList()
                 self.View.tableView.reloadData()
                 break
             case .failure(let error):
                 self.View.stopAnimating()
+                self.View.Activity.stopAnimating()
                 self.View.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
                 print(error)
                 break
@@ -37,6 +38,7 @@ class AdminNotifObj: NSObject {
             (response) in
             switch response.result {
             case .success(_):
+                self.View.stopAnimating()
                 //                self.setNewTablesForWaiter(staffUser: response.data!.create(type: StaffUser.self))
 //                print("huina \(response)")
                 success()

@@ -21,14 +21,15 @@ class LoginVC: UIViewController , NVActivityIndicatorViewable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        PreferenceUtils.clearData()
         UI()
         // Do any additional setup after loading the view.
     }
+
     
     func UI(){
-        mailTF.text = "test2@gmail.com"
-        passTF.text = "1234567q"
+//        mailTF.text = "test2@gmail.com"
+//        passTF.text = "1234567q"
         singleLine(view: mailTF, lineColor: UIColor.init(white: 33/100, alpha: 1))
         singleLine(view: passTF, lineColor: UIColor.init(white: 33/100, alpha: 1))
     }
@@ -38,15 +39,6 @@ class LoginVC: UIViewController , NVActivityIndicatorViewable {
     }
 
     @IBAction func loginBtn(_ sender: Any) {
-        
-        
-        defaults.set(12, forKey: "Age")
-        
-        let age = defaults.integer(forKey: "Age")
-        
-        print("age \(age)")
-        
-        
         
         startAnimating(type : NVActivityIndicatorType.ballPulseSync)
         RegObj.mail = mailTF.text!
@@ -61,8 +53,8 @@ class LoginVC: UIViewController , NVActivityIndicatorViewable {
     
     
     @IBAction func changeUser(_ sender: Any) {
-        mailTF.text = "vasil@vasil.vasil"
-        passTF.text = "123123q"
+//        mailTF.text = "vasil@vasil.vasil"
+//        passTF.text = "123123q"
         
     }
 }

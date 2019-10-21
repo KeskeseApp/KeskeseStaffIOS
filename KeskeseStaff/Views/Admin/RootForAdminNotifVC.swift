@@ -36,10 +36,10 @@ class RootForAdminNotifVC: ButtonBarPagerTabStripViewController {
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         
-        let cell1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GuestNotifForAdmin") as! AdminNotifVC
-        let cell2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WaiterNotifsForAdmin") as! WaiterNotifsForAdmin
+        let cell1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WaiterNotifsForAdmin") as! WaiterNotifsForAdmin
+        let cell2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FeedbackVC") as! FeedbackVC
 
-        return [cell1,cell2]
+        return [cell2,cell1]
         
     }
 

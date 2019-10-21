@@ -5,5 +5,29 @@
   Created by NI Vol on 9/7/19.
   Copyright © 2019 Keskese. All rights reserved.
 */
-
-"Cancel" = "Отменить"; 
+"Cancel" = "Отменить";
+"CallA" = "Вызов Администратора";
+"CallW" = "Вызов Официанта";
+"PayC" = "Оплата Наличкой";
+"PayCard" = "Оплата Картой";
+"Busy" = "Занят";
+"Free" = "Свободный";
+"New Order" = "Новый Заказ";
+"Join Shedule" = "Присоединился к Смене";
+"Left Shedule" = "Вышел со Смены";
+"Rate" = "Оценка";
+"Staff" = "Персонал";
+"Guest" = "Гость";
+"Status" = "Статус";
+"Admin" = "Администратор";
+"Waiter" = "Официант";
+"Job" = "Место работы";
+"Table" = "Стол";
+"Scan QR-Code" = "Просканируйте QR-Code";
+"Log out" = "Выйти?";
+"The list is empty" = "Список пуст";
+"Seen" = "Просмотреть";
+"Close order" = "Закрыть стол";
+"Feedback" = "Отзывы";
+"Name" = "Имя";
+"Phone" = "Телефон";

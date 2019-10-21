@@ -10,14 +10,16 @@ import UIKit
 
 class StartVC: UIViewController {
 
+    @IBOutlet var emptyView: EmptyView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        PreferenceUtils.clearData()
         print("0")
+        emptyView.reloadBtn.addTarget(self, action: #selector(refreshPage), for: .touchUpInside)
         if PreferenceUtils.username != ""{
             print("1")
             self.getUser()
@@ -39,6 +41,7 @@ class StartVC: UIViewController {
                 break
             case .failure(let error):
                 self.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
+                self.emptyView.internetProblrms(view: self.emptyView)
                 print(error)
                 break
             }
@@ -51,15 +54,24 @@ class StartVC: UIViewController {
             switch response.result {
             case .success(_):
                 
-                staff = response.data!.createList(type: StaffUser.self)[0]
-                
-                self.staffType(type: staff.staff_status!)
+                let staffSpotUserList = response.data!.createList(type: StaffSpotUser.self)
+                if !staffSpotUserList.isEmpty{
+                    let staffSpotUser = staffSpotUserList[0]
+                                                
+                    staff = staffSpotUser.staff
+                    spot = staffSpotUser.spot
+                    
+                    self.staffType(type: staff.staff_status!)
+                } else {
+                    self.performSegue(withIdentifier: "startToReg", sender: nil)
+                }
                 
 //                self.postFcmDevice()
                 
                 break
             case .failure(let error):
                 self.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
+                self.emptyView.internetProblrms(view: self.emptyView)
                 print(error)
                 break
             }
@@ -71,13 +83,25 @@ class StartVC: UIViewController {
         if type == "\(STAFF_STATUSES.ADMIN)"{
             performSegue(withIdentifier: "startToAdmin", sender: nil)
 //            logVC.staffType = "admin"
-            userType = "Администратор"
+            userType = NSLocalizedString("Admin", comment: "")
         } else if type == "\(STAFF_STATUSES.WAITER)"{
             
             performSegue(withIdentifier: "startToGuest", sender: nil)
 //            logVC.staffType = "waiter"
-            userType = "Официант"
+            userType = NSLocalizedString("Waiter", comment: "")
         }
     }
-
+    
+    @objc func refreshPage(){
+        if PreferenceUtils.username != ""{
+            print("1")
+            self.getUser()
+            
+        } else {
+            print("2")
+            performSegue(withIdentifier: "startToReg", sender: nil)
+        }
+        emptyView.isHidden = true
+    }
+    
 }

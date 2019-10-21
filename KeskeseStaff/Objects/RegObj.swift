@@ -19,7 +19,6 @@ class RegObj: NSObject {
     var mail : String!
     var view : UIView!
     
-    
     @IBOutlet weak var logVC: LoginVC!
     
     func getToketValue(completion: @escaping (_ error: NSError?) -> Void) {
@@ -32,19 +31,19 @@ class RegObj: NSObject {
                 
                 if jsonData["token"] != JSON.null{
                     PreferenceUtils.token = jsonData["token"].string!
-                    PreferenceUtils.username = self.mail
-                    PreferenceUtils.password = self.pass
+                    
                     self.getUser()
                     
                 } else {
                     
                     print(value)
+                    self.logVC.stopAnimating()
                     self.view.makeToast("Електронная почта или пароль введены неправильно")
                     
                 }
                 break
             case .failure(let error):
-                
+                self.logVC.stopAnimating()
                 self.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
                 print(error)
                 break
@@ -64,6 +63,7 @@ class RegObj: NSObject {
                 self.getStaff(userId: user.id!)
                 break
             case .failure(let error):
+                self.logVC.stopAnimating()
                 self.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
                 print(error)
                 break
@@ -77,14 +77,24 @@ class RegObj: NSObject {
             switch response.result {
             case .success(_):
                 
-                staff = response.data!.createList(type: StaffUser.self)[0]
+                let staffSpotUserList = response.data!.createList(type: StaffSpotUser.self)
+                if !staffSpotUserList.isEmpty{
                 
-                self.staffType(type: staff.staff_status!)
-                
-                self.postFcmDevice()
-                
+                    let staffSpotUser = staffSpotUserList[0]
+                    staff = staffSpotUser.staff
+                    spot = staffSpotUser.spot
+                    
+                    self.staffType(type: staff.staff_status!)
+                    
+                    self.postFcmDevice()
+                    
+                } else {
+                    
+                }
+               
                 break
             case .failure(let error):
+                self.logVC.stopAnimating()
                 self.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
                 print(error)
                 break
@@ -99,23 +109,31 @@ class RegObj: NSObject {
                                 switch response.result {
                                 case .success(let value):
                                     print(value)
+                                    self.saveData()
                                     self.logVC.goNext()
                                     break
                                 case .failure(let error):
+                                    self.logVC.stopAnimating()
                                     self.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
                                     print(error)
                                     break
                                 }
         }
     }
+    
+    func saveData(){
+        PreferenceUtils.username = self.mail
+        PreferenceUtils.password = self.pass
+    }
+    
     func staffType(type : String){
         print(type)
         if type == "\(STAFF_STATUSES.ADMIN)"{
             logVC.staffType = "admin"
-            userType = "Администратор"
+            userType = NSLocalizedString("Admin", comment: "")
         } else if type == "\(STAFF_STATUSES.WAITER)"{
             logVC.staffType = "waiter"
-            userType = "Официант"
+            userType = NSLocalizedString("Waiter", comment: "")
         }
     }
 }

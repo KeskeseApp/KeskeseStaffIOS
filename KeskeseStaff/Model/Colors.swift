@@ -15,5 +15,5 @@ class Color {
     static let red = hexStringToUIColor(hex: "#D34747")
     static let green = hexStringToUIColor(hex: "#09AE2D")
     static let blue = hexStringToUIColor(hex: "#1E88E5")
-    static let dark = hexStringToUIColor(hex: "#212121")
+    static let dark = hexStringToUIColor(hex: "#424242")
 }

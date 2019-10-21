@@ -75,6 +75,9 @@ PODS:
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
+  - SwiftMessages (7.0.0):
+    - SwiftMessages/App (= 7.0.0)
+  - SwiftMessages/App (7.0.0)
   - SwiftyJSON (5.0.0)
   - Toast-Swift (5.0.0)
   - XLPagerTabStrip (8.1.0)
@@ -88,6 +91,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
+  - SwiftMessages
   - SwiftyJSON
   - Toast-Swift
   - XLPagerTabStrip
@@ -111,6 +115,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SwiftMessages
     - SwiftyJSON
     - Toast-Swift
     - XLPagerTabStrip
@@ -133,10 +138,11 @@ SPEC CHECKSUMS:
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SwiftMessages: a952f7a9103d9aeab93730a2861d2d8fcdd8758f
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
   XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
 
-PODFILE CHECKSUM: 1938386ec63df39f3335974c2f6b528f43005b67
+PODFILE CHECKSUM: 5f57baedc02147d782b4b5728c95eb0ba8dae733
 
 COCOAPODS: 1.5.3
