@@ -270,6 +270,9 @@ class ViewModelRegObj: NSObject, UINavigationControllerDelegate, UIImagePickerCo
         } else if type == "\(STAFF_STATUSES.WAITER)"{
             View.staffType = "regToWaiter"
             userType = NSLocalizedString("Waiter", comment: "")
+        } else if type == "\(STAFF_STATUSES.CHEF)"{
+            View.staffType = "regToChef"
+            userType = NSLocalizedString("Waiter", comment: "")
         }
     }
     

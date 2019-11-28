@@ -10,8 +10,7 @@ import Foundation
 
 struct StaffSettings : Codable {
     var id : Int
-    var join_schedule : Bool
-    var leave_schedule : Bool
-    var low_stars : Bool
-    var high_stars : Bool
+    var waiter_call : Bool
+    var admin_call : Bool
+    var cash_out : Bool
 }

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +12,6 @@
             <connections>
                 <outlet property="highRateSwitch" destination="yTM-JZ-tYS" id="cZX-rp-Ijd"/>
                 <outlet property="joinShiftSwitch" destination="zP8-I9-dBM" id="6yF-Wp-MYB"/>
-                <outlet property="leftShiftSwich" destination="hfq-LF-zZC" id="Z6q-Pt-j2K"/>
                 <outlet property="lowRateSwitch" destination="YGw-vS-rh1" id="gvz-M1-Dl5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,13 +22,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZXI-aI-lba">
-                    <rect key="frame" x="10" y="519" width="394" height="333"/>
+                    <rect key="frame" x="10" y="588" width="394" height="264"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KoH-UH-enL">
-                            <rect key="frame" x="0.0" y="0.0" width="394" height="268"/>
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="199"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="nvp-d2-x01">
-                                    <rect key="frame" x="15" y="15" width="364" height="238"/>
+                                    <rect key="frame" x="15" y="15" width="364" height="169"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8qO-sF-cca">
                                             <rect key="frame" x="0.0" y="0.0" width="364" height="31"/>
@@ -42,7 +39,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yTM-JZ-tYS">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yTM-JZ-tYS">
                                                     <rect key="frame" x="315" y="0.0" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="highRateSwitch:" destination="-1" eventType="valueChanged" id="P8I-Fo-0Dt"/>
@@ -59,7 +56,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGw-vS-rh1">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YGw-vS-rh1">
                                                     <rect key="frame" x="315" y="0.0" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="lowRateSwitch:" destination="-1" eventType="valueChanged" id="XhG-Vi-bJp"/>
@@ -76,27 +73,10 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zP8-I9-dBM">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zP8-I9-dBM">
                                                     <rect key="frame" x="315" y="0.0" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="joinShiftSwitch:" destination="-1" eventType="valueChanged" id="CUZ-05-Cde"/>
-                                                    </connections>
-                                                </switch>
-                                            </subviews>
-                                        </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="af1-68-5Rg">
-                                            <rect key="frame" x="0.0" y="207" width="364" height="31"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left from shift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdr-fa-Cha">
-                                                    <rect key="frame" x="0.0" y="0.0" width="295" height="31"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfq-LF-zZC">
-                                                    <rect key="frame" x="315" y="0.0" width="51" height="31"/>
-                                                    <connections>
-                                                        <action selector="leftShiftSwitch:" destination="-1" eventType="valueChanged" id="a5W-NS-vgF"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -118,7 +98,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBh-mU-nBk">
-                            <rect key="frame" x="0.0" y="278" width="394" height="55"/>
+                            <rect key="frame" x="0.0" y="209" width="394" height="55"/>
                             <color key="backgroundColor" red="1" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="06a-xV-rO7"/>
@@ -139,7 +119,7 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etg-xr-eeC">
-                    <rect key="frame" x="0.0" y="44" width="414" height="475"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="544"/>
                     <connections>
                         <action selector="doneBtn:" destination="-1" eventType="touchUpInside" id="CTU-kp-LVP"/>
                     </connections>
@@ -156,6 +136,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZXI-aI-lba" secondAttribute="trailing" constant="10" id="zr9-OU-sZC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="106"/>
         </view>
     </objects>
 </document>

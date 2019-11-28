@@ -10,6 +10,8 @@ import UIKit
 
 class FeedBackCell: UITableViewCell {
 
+    @IBOutlet weak var serviceLbl: UILabel!
+    @IBOutlet weak var foodLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var staffNameLbl: UILabel!

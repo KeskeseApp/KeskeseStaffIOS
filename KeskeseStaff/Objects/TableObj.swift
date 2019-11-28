@@ -69,7 +69,8 @@ class TableObj: NSObject {
     
     func sortMyTables(staffId : Int, tables: [TableResponse]) -> [TableResponse]{
         self.MyTableView.reloadList()
-        return tables.filter({ $0.staff.id == staffId})
+//        return tables.filter({ $0.staff.id == staffId})
+        return tables
     }
     
     func emoji(data : TableResponse) -> String {

@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 import Alamofire
+import UserNotifications
 
 class ProfileVC: UIViewController, UITableViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -25,7 +26,9 @@ class ProfileVC: UIViewController, UITableViewDelegate, UINavigationControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
         var avatar_url: URL
@@ -69,6 +72,44 @@ class ProfileVC: UIViewController, UITableViewDelegate, UINavigationControllerDe
         }
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let notificationType = UIApplication.shared.currentUserNotificationSettings!.types
+        if notificationType == [] {
+            
+            print("notifications are NOT enabled")
+            let alertController = UIAlertController (title: "Приложение Keskese Staff запрашивает разрешение на отправку Вам уведомлений", message: "Для работы с программой обязательно должны быть включены уведомления, перейти в настройки?", preferredStyle: .alert)
+
+            let settingsAction = UIAlertAction(title: "Да", style: .default) { (_) -> Void in
+
+                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                    return
+                }
+
+                if UIApplication.shared.canOpenURL(settingsUrl) {
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                            print("Settings opened: \(success)") // Prints true
+                        })
+                    } else {
+                        // Fallback on earlier versions
+                    }
+                }
+            }
+            alertController.addAction(settingsAction)
+            let cancelAction = UIAlertAction(title: "Нет", style: .default, handler: nil)
+            alertController.addAction(cancelAction)
+
+            present(alertController, animated: true, completion: nil)
+            
+            
+        } else {
+            print("notifications are enabled")
+        }
+        
+    }
+    
+    
     @IBAction func profileImageBtn(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
             print("Button capture")

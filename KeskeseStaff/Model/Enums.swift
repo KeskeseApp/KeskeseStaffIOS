@@ -18,14 +18,17 @@ enum TABLE_STATUSES{
     case ADMIN_CALL
     case CASH_OUT
     case CARD_OUT
+    case DISH_READY
 }
 
 enum STAFF_STATUSES{
     case ADMIN
     case WAITER
+    case CHEF
 }
 
 enum EMOJI{
+    case EMPTY
     case SAD
     case OKAY
     case HAPPY

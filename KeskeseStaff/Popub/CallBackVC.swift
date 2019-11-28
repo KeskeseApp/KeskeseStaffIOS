@@ -32,7 +32,7 @@ class CallBackVC: UIViewController {
         
         switch lastView {
         case "notif":
-            setData(color: getCardColor(tableStatus: notifData.type), number: String(notifData.table.number), time: notifData.time)
+            setData(color: getCardColor(tableStatus: notifData.type), number: String(notifData.table?.number ?? 0), time: notifData.time)
             
         case "admin":
             setData(color: getCardColor(tableStatus: adminNotifData.type), number: String("adminNotifData.staff"), time: adminNotifData.time ?? "null")

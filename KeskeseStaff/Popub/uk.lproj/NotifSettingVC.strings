@@ -1,15 +1,11 @@
+/* Class = "UILabel"; text = "Высокий Рейтинг"; ObjectID = "4dN-04-ISY"; */
+"4dN-04-ISY.text" = "Виклик Офіціанта";
 
-/* Class = "UILabel"; text = "Hight Rating"; ObjectID = "4dN-04-ISY"; */
-"4dN-04-ISY.text" = "Високий рейтинг";
-
-/* Class = "UILabel"; text = "Join to Shift"; ObjectID = "7qn-hl-kQt"; */
-"7qn-hl-kQt.text" = "Приєднався до Зміни";
-
-/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "HBh-mU-nBk"; */
+/* Class = "UIButton"; normalTitle = "Готово"; ObjectID = "HBh-mU-nBk"; */
 "HBh-mU-nBk.normalTitle" = "Готово";
 
-/* Class = "UILabel"; text = "Low Rating"; ObjectID = "gE5-yc-5Zv"; */
-"gE5-yc-5Zv.text" = "Низький рейтинг";
+/* Class = "UILabel"; text = "Низкий Рейтинг"; ObjectID = "gE5-yc-5Zv"; */
+"gE5-yc-5Zv.text" = "Виклик Адміністратора";
 
-/* Class = "UILabel"; text = "Left from shift"; ObjectID = "jdr-fa-Cha"; */
-"jdr-fa-Cha.text" = "Вийшов зі зміни";
+/* Class = "UILabel"; text = "Вышел со Смены"; ObjectID = "jdr-fa-Cha"; */
+"7qn-hl-kQt.text" = "Запит чеку";

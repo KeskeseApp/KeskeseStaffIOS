@@ -12,7 +12,7 @@ class ChoiceLoginMethodVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("age \(defaults.integer(forKey: "Age"))")
+        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }

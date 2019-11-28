@@ -11,7 +11,7 @@ import XLPagerTabStrip
 import NVActivityIndicatorView
 
 
-class MyTablesVC: UIViewController, UICollectionViewDelegate , UICollectionViewDataSource, IndicatorInfoProvider,NVActivityIndicatorViewable {
+class MyTablesVC: UIViewController, UICollectionViewDelegate , UICollectionViewDataSource, IndicatorInfoProvider,NVActivityIndicatorViewable, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var emptyV: EmptyView!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -61,6 +61,17 @@ class MyTablesVC: UIViewController, UICollectionViewDelegate , UICollectionViewD
     override func viewWillDisappear(_ animated: Bool) {
           super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "load"), object: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if UIScreen.main.bounds.height <= 570{
+            return CGSize(width: 140, height: 104)
+        } else {
+            return CGSize(width: 165, height: 104)
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

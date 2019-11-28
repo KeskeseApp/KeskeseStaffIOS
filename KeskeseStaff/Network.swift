@@ -22,6 +22,8 @@ let WAITER_NOTIF = "\(BASE_URL)/api/customers/waiter_notifications/"
 let ADMIN_NOTIF =  "\(BASE_URL)/api/customers/admin_notifications/"
 let JOIN_TABLE = "\(BASE_URL)/join_table/"
 let STAFF_SETTINGS = "\(BASE_URL)/api/customers/staff_settings/"
+let APP_VERSION = "\(BASE_URL)/api/customers/app_version/"
+
 
 let ATTACH_NEW_STAFF_TABlE = "\(BASE_URL)/api/customers/attach_new_staff_table/"
 
@@ -64,6 +66,30 @@ func postFcmDevice(name: String, userId: Int, fcmToken: String) -> DataRequest{
                              parameters: params,
                              encoding: URLEncoding(),
                              headers: header)
+}
+
+func postNotifWaiter(user : Int?, table : Int?) -> DataRequest{
+    let link = "\(WAITER_NOTIF)"
+    
+    var params: Parameters! = [
+        "type" : "\(TABLE_STATUSES.DISH_READY)",
+        "seen" : false,
+        "time" : getTimeNow()
+    ]
+    
+    if user != nil {
+        params.updateValue(user!, forKey: "user")
+    }
+    
+    if table != nil {
+        params.updateValue(table!, forKey: "table")
+    }
+            
+    return Alamofire.request(link,
+                            method: .post,
+                            parameters: params,
+                            encoding: JSONEncoding(),
+                            headers: header)
 }
 
 func postAdminNotif(staff : Int, type : String) -> DataRequest{
@@ -144,10 +170,9 @@ func patchStaffSettings(settings : StaffSettings, staffId : Int) -> DataRequest{
     let link = "\(STAFF_SETTINGS)\(staffId)/"
     print("link \(link)")
     let params = [
-        "join_schedule" : settings.join_schedule,
-        "leave_schedule" : settings.leave_schedule,
-        "low_stars" : settings.low_stars,
-        "high_stars" : settings.high_stars
+        "waiter_call" : settings.waiter_call,
+        "admin_call" : settings.admin_call,
+        "cash_out" : settings.cash_out
     ]
     
     return Alamofire.request(link, method: .patch,
@@ -263,6 +288,16 @@ func getUser(username : String) -> DataRequest{
 func getStaffSettings(staffId : Int) -> DataRequest{
     let url = "\(STAFF_SETTINGS)?staff_id=\(staffId)"
     print("zoibav \(url)")
+    return Alamofire.request(url,
+                             method: .get,
+                             parameters: nil,
+                             encoding: URLEncoding(),
+                             headers: header)
+}
+
+func getAppVersion() -> DataRequest{
+    let url = "\(APP_VERSION)"
+    print("App version zoibav \(url)")
     return Alamofire.request(url,
                              method: .get,
                              parameters: nil,

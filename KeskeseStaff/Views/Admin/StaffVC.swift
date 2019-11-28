@@ -144,11 +144,11 @@ class StaffVC: UIViewController, UICollectionViewDelegate , UICollectionViewData
             animateCollectionCell(cell: cell)
             let staffTableIndex = staffTables.firstIndex(where: {$0.tableId == table.table.id})
             
-            cell.statusLbl.backgroundColor = model.viewColor(indexPath: indexPath)
-            cell.tableNumber.backgroundColor = model.viewColor(indexPath: indexPath)
+            cell.statusLbl.backgroundColor = model.viewColor(indexPath: indexPath, viewIndex: 0)
+            cell.tableNumber.backgroundColor = model.viewColor(indexPath: indexPath, viewIndex: 0)
             cell.tableNumber.text = String(table.table.number)
-            cell.statusLbl.text = model.status(indexPath: indexPath)
-            cell.emotionLbl.text = model.emoji(indexPath: indexPath)
+            cell.statusLbl.text = model.status(indexPath: indexPath, viewIndex: 0)
+            cell.emotionLbl.text = model.emoji(indexPath: indexPath, viewIndex: 0)
             
             
             
@@ -181,13 +181,13 @@ class StaffVC: UIViewController, UICollectionViewDelegate , UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if collectionView == staffCV{
-            
-            staffSelectedIndex = indexPath
-            
-            staffSelection = true
-            aceptBtn.isHidden = false
-        
-            staffCV.reloadData()
+//            
+//            staffSelectedIndex = indexPath
+//            
+//            staffSelection = true
+//            aceptBtn.isHidden = false
+//        
+//            staffCV.reloadData()
             
         } else if collectionView == tablesCV {
 

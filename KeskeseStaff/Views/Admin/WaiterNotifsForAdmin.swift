@@ -60,12 +60,30 @@ class WaiterNotifsForAdmin: UIViewController , UITableViewDelegate , UITableView
         let data = notifList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotifCell", for: indexPath) as!  NotifCell
         animate(cell: cell)
-        cell.indexLbl.text = String(data.table.number)
+        if data.table?.number != nil{
+            cell.indexLbl.text = String(data.table?.number ?? 0)
+        } else {
+            cell.indexLbl.text = "K"
+        }
+        
         cell.timeLbl.text = data.time
 //        cell.typeLbl.text = data.type
         tableStatuses(type: data.type, view: cell.BG, statys: cell.statysLbl, seen: data.seen, button: cell.confirmBtn)
         cell.indexBG.borderColorV = cell.BG.borderColorV
-        cell.confirmBtn.isHidden = true
+//        if data.user != user.id{
+            cell.confirmBtn.isHidden = true
+//        } else {
+//            cell.confirmBtn.isHidden = false
+//        }
+        
+        if data.seen{
+                   cell.confirmBtn.setTitle(NSLocalizedString("Close order", comment: "") , for: .normal)
+                   } else {
+                       cell.confirmBtn.setTitle(NSLocalizedString("Seen", comment: ""), for: .normal)
+                   }
+        
+        cell.confirmBtn.addTarget(self, action: #selector(confirmBtn(sender:)), for: .touchUpInside)
+        
         
         return cell
     }
@@ -98,5 +116,49 @@ class WaiterNotifsForAdmin: UIViewController , UITableViewDelegate , UITableView
         ModelObj.getData()
         self.emptyView.isHidden = true
     }
+    
+    @objc func confirmBtn(sender : UIButton){
+           
+           let data = notifList[sender.tag]
+           if data.seen{
+               // start loading
+               
+               let alert = UIAlertController(title: "\(NSLocalizedString("Close order", comment: ""))?", message: "", preferredStyle: UIAlertController.Style.alert)
+               
+               // add the actions (buttons)
+               alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {action in
+                   self.startAnimating(type : NVActivityIndicatorType.ballPulseSync)
+                unassignTable(old_staff_id: staff.id!, table_id: data.table?.id ?? 0)
+                       .responseJSON{
+                           (response) in
+                           switch response.result {
+                           case .success(_):
+                               //                self.View.stopAnimating()
+                               
+                            self.ModelObj.getData()
+                               self.stopAnimating()
+                               break
+                               
+                           case .failure(let error):
+                               self.stopAnimating()
+                               print(error)
+                               break
+                           }
+                   }
+               }))
+               alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
+               
+               // show the alert
+               self.present(alert, animated: true, completion: nil)
+               
+           } else {
+               let successFunc = {
+                   self.notifList[sender.tag].seen = !data.seen
+                   self.tableView.reloadData()
+                   self.stopAnimating()
+               }
+               ModelObj.patchNotif(seen: !data.seen, elemId: data.id, success: successFunc)
+           }
+       }
     
 }

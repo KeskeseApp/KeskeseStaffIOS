@@ -62,6 +62,21 @@ class FeedbackVC: UIViewController, UITableViewDelegate , UITableViewDataSource 
         } else {
             cell.nameLbl.isHidden = true
         }
+        
+        if data.emotion1 != "\(EMOJI.EMPTY)"{
+            cell.serviceLbl.text = "Обслуживание : \(emoji(data: data.emotion1))"
+            
+            cell.serviceLbl.isHidden = false
+        } else {
+            cell.serviceLbl.isHidden = true
+        }
+        
+        if data.emotion2 != "\(EMOJI.EMPTY)"{
+            cell.foodLbl.text = "Кухня : \(emoji(data: data.emotion2))"
+            cell.foodLbl.isHidden = false
+        } else {
+            cell.foodLbl.isHidden = true
+        }
        
         if data.phone != ""{
             cell.phoneLbl.isHidden = false
@@ -97,6 +112,10 @@ class FeedbackVC: UIViewController, UITableViewDelegate , UITableViewDataSource 
                         break
                     }
                 }
+    }
+    
+    func emoji(data : String) -> String {
+        return getEmotionForFeedback(emotion: data)
     }
     
     func getComment(){

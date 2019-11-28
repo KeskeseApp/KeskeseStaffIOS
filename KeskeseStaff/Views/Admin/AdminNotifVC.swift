@@ -71,6 +71,7 @@ class AdminNotifVC: UIViewController, UITableViewDelegate , UITableViewDataSourc
         cell.namelbl.text = data.staff.name
         waiterNotifs(type: data.type, view: cell.BG, statys: cell.statysLbl, seen: data.seen, button: cell.confirmBtn)
         cell.indexBG.borderColorV = cell.BG.borderColorV
+//        cell.confirmBtn.isHidden = true
         
         return cell
     }

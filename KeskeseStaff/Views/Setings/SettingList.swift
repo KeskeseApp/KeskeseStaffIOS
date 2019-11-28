@@ -82,7 +82,7 @@ class SettingList: UITableViewController, NVActivityIndicatorViewable {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0{
+        if indexPath.row == 0 && staff!.staff_status == "\(STAFF_STATUSES.WAITER)"{
             return 0
         } else if indexPath.row == 1 && spot == nil{
             return 0

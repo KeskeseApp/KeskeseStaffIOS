@@ -37,6 +37,8 @@
 		EF5CCF0722FDCD2D00A4148A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5CCF0622FDCD2C00A4148A /* User.swift */; };
 		EF84C441232304B9006FDA35 /* CallBackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF84C443232304B9006FDA35 /* CallBackVC.xib */; };
 		EF84C45623230ACB006FDA35 /* NotifSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF84C45823230ACB006FDA35 /* NotifSettingVC.xib */; };
+		EF86F9762373446400C47872 /* ChefTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF86F9752373446400C47872 /* ChefTabs.swift */; };
+		EF86F978237EF32F00C47872 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF86F977237EF32F00C47872 /* AppVersion.swift */; };
 		EF941BA0230EA2AC0004F1B8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF941B9F230EA2AC0004F1B8 /* Colors.swift */; };
 		EF941BA2230F30770004F1B8 /* NotifListObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF941BA1230F30770004F1B8 /* NotifListObj.swift */; };
 		EF941BA4230F4AB60004F1B8 /* TableObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF941BA3230F4AB60004F1B8 /* TableObj.swift */; };
@@ -88,6 +90,9 @@
 		EFC69B0D233A5FC600CC0BF0 /* FeedBackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC69B0C233A5FC600CC0BF0 /* FeedBackCell.swift */; };
 		EFC69B0F233A61E600CC0BF0 /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC69B0E233A61E600CC0BF0 /* FeedbackVC.swift */; };
 		EFC69B11233A62C500CC0BF0 /* FeedbackElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC69B10233A62C500CC0BF0 /* FeedbackElem.swift */; };
+		EFD191DA2368ABDA00C50359 /* TablesForCheffVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD191D92368ABDA00C50359 /* TablesForCheffVC.swift */; };
+		EFD191DC236B363600C50359 /* RootForHall.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD191DB236B363600C50359 /* RootForHall.swift */; };
+		EFD191DE236B3FE500C50359 /* StaffForChefVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD191DD236B3FE500C50359 /* StaffForChefVC.swift */; };
 		EFF1E37223231128007D9E3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFF1E37423231128007D9E3E /* Localizable.strings */; };
 		EFF1E37D23239DC3007D9E3E /* AdminTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF1E37C23239DC3007D9E3E /* AdminTabs.swift */; };
 		EFF1E37F23239E08007D9E3E /* WaiterTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF1E37E23239E08007D9E3E /* WaiterTabs.swift */; };
@@ -153,13 +158,14 @@
 		EF84C45723230ACB006FDA35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NotifSettingVC.xib; sourceTree = "<group>"; };
 		EF84C45A23230AE0006FDA35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NotifSettingVC.strings; sourceTree = "<group>"; };
 		EF84C45C23230AE6006FDA35 /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/NotifSettingVC.strings"; sourceTree = "<group>"; };
-		EF84C45F23230D5F006FDA35 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/NotifSettingVC.strings"; sourceTree = "<group>"; };
 		EF84C46023230D5F006FDA35 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Main.strings"; sourceTree = "<group>"; };
 		EF84C46123230D5F006FDA35 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		EF84C46223230D5F006FDA35 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "en-US"; path = "en-US.lproj/CallBackVC.xib"; sourceTree = "<group>"; };
 		EF84C46323230EBE006FDA35 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/NotifSettingVC.strings; sourceTree = "<group>"; };
 		EF84C46423230EBE006FDA35 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		EF84C46623230EBE006FDA35 /* uk */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = uk; path = uk.lproj/CallBackVC.xib; sourceTree = "<group>"; };
+		EF86F9752373446400C47872 /* ChefTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefTabs.swift; sourceTree = "<group>"; };
+		EF86F977237EF32F00C47872 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		EF941B9F230EA2AC0004F1B8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EF941BA1230F30770004F1B8 /* NotifListObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifListObj.swift; sourceTree = "<group>"; };
 		EF941BA3230F4AB60004F1B8 /* TableObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableObj.swift; sourceTree = "<group>"; };
@@ -218,9 +224,11 @@
 		EFC69B0C233A5FC600CC0BF0 /* FeedBackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackCell.swift; sourceTree = "<group>"; };
 		EFC69B0E233A61E600CC0BF0 /* FeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
 		EFC69B10233A62C500CC0BF0 /* FeedbackElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackElem.swift; sourceTree = "<group>"; };
+		EFD191D92368ABDA00C50359 /* TablesForCheffVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesForCheffVC.swift; sourceTree = "<group>"; };
+		EFD191DB236B363600C50359 /* RootForHall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootForHall.swift; sourceTree = "<group>"; };
+		EFD191DD236B3FE500C50359 /* StaffForChefVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffForChefVC.swift; sourceTree = "<group>"; };
 		EFF1E37323231128007D9E3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EFF1E3752323112E007D9E3E /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		EFF1E3762323112F007D9E3E /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EFF1E37723231130007D9E3E /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EFF1E37C23239DC3007D9E3E /* AdminTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabs.swift; sourceTree = "<group>"; };
 		EFF1E37E23239E08007D9E3E /* WaiterTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterTabs.swift; sourceTree = "<group>"; };
@@ -288,6 +296,7 @@
 				EF4F70CD2317DD4F00EED7F8 /* RootForAdminNotifVC.swift */,
 				EF4F70D1231AB2E600EED7F8 /* WaiterNotifsForAdmin.swift */,
 				EFC69B0E233A61E600CC0BF0 /* FeedbackVC.swift */,
+				EFF1E37C23239DC3007D9E3E /* AdminTabs.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -298,6 +307,7 @@
 				EF0E253E2302EDA6003D65B3 /* NotiffVC.swift */,
 				EFB22E4E230E02DC008D8BF3 /* MyTablesVC.swift */,
 				EFB22E4C230DDE18008D8BF3 /* RootForTableVC.swift */,
+				EFF1E37E23239E08007D9E3E /* WaiterTabs.swift */,
 			);
 			path = Waiter;
 			sourceTree = "<group>";
@@ -332,6 +342,7 @@
 				EFB3CC8322F98EC600036F96 /* StaffTable.swift */,
 				EFB3CC8122F8238E00036F96 /* StaffElem.swift */,
 				EF5CCF0622FDCD2C00A4148A /* User.swift */,
+				EF86F977237EF32F00C47872 /* AppVersion.swift */,
 				EF0E2540230316E1003D65B3 /* WaiterNotif.swift */,
 				EF0E254223043011003D65B3 /* TablesElem.swift */,
 				EFB22E50230E06EC008D8BF3 /* TableInNotif.swift */,
@@ -500,12 +511,11 @@
 		EFB3CC6E22F23A6D00036F96 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EFD191D82368AB0800C50359 /* Chef */,
 				EF4F70C82317BF1200EED7F8 /* Setings */,
 				EF4F70C72317BED200EED7F8 /* Waiter */,
 				EF4F70C62317BEC400EED7F8 /* Admin */,
 				EFB3CC6F22F23A7400036F96 /* Login */,
-				EFF1E37C23239DC3007D9E3E /* AdminTabs.swift */,
-				EFF1E37E23239E08007D9E3E /* WaiterTabs.swift */,
 				EFF1E3822328EC21007D9E3E /* ScannerVC.swift */,
 			);
 			path = Views;
@@ -554,6 +564,17 @@
 				EF941B9F230EA2AC0004F1B8 /* Colors.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EFD191D82368AB0800C50359 /* Chef */ = {
+			isa = PBXGroup;
+			children = (
+				EFD191D92368ABDA00C50359 /* TablesForCheffVC.swift */,
+				EFD191DB236B363600C50359 /* RootForHall.swift */,
+				EFD191DD236B3FE500C50359 /* StaffForChefVC.swift */,
+				EF86F9752373446400C47872 /* ChefTabs.swift */,
+			);
+			path = Chef;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -794,6 +815,7 @@
 				EF0E2541230316E1003D65B3 /* WaiterNotif.swift in Sources */,
 				EFB3CA7A22F05BEE00036F96 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				EF5CCF0722FDCD2D00A4148A /* User.swift in Sources */,
+				EF86F978237EF32F00C47872 /* AppVersion.swift in Sources */,
 				EF4F70D0231A9D5400EED7F8 /* ParametersEncoding.swift in Sources */,
 				EFC69B11233A62C500CC0BF0 /* FeedbackElem.swift in Sources */,
 				EF4F70C52317BE4E00EED7F8 /* AdminNotif.swift in Sources */,
@@ -833,16 +855,20 @@
 				EF4F70BD231594BA00EED7F8 /* PreferenceUtils.swift in Sources */,
 				EF4F70BF2315DDD700EED7F8 /* StartVC.swift in Sources */,
 				EFB3CA7022F05BEE00036F96 /* IQTextView.swift in Sources */,
+				EFD191DE236B3FE500C50359 /* StaffForChefVC.swift in Sources */,
 				EFF1E37F23239E08007D9E3E /* WaiterTabs.swift in Sources */,
 				EF0E254323043011003D65B3 /* TablesElem.swift in Sources */,
 				EFB3CA7222F05BEE00036F96 /* IQTitleBarButtonItem.swift in Sources */,
 				EF16D21F232FFAC0002D73EE /* StaffSettings.swift in Sources */,
+				EFD191DA2368ABDA00C50359 /* TablesForCheffVC.swift in Sources */,
+				EF86F9762373446400C47872 /* ChefTabs.swift in Sources */,
 				EFB22E4F230E02DC008D8BF3 /* MyTablesVC.swift in Sources */,
 				EFB3CC8222F8238E00036F96 /* StaffElem.swift in Sources */,
 				EF0E25382301BB25003D65B3 /* tableElemCell.swift in Sources */,
 				EFB3CA5522F055E100036F96 /* RestrationVC.swift in Sources */,
 				EFC69B0F233A61E600CC0BF0 /* FeedbackVC.swift in Sources */,
 				EFB3CA5722F0563C00036F96 /* UI.swift in Sources */,
+				EFD191DC236B363600C50359 /* RootForHall.swift in Sources */,
 				EFB3CA7422F05BEE00036F96 /* IQToolbar.swift in Sources */,
 				EF0E254723043BC9003D65B3 /* Enums.swift in Sources */,
 				EFB3CA7622F05BEE00036F96 /* IQInvocation.swift in Sources */,
@@ -912,7 +938,6 @@
 				EF84C45723230ACB006FDA35 /* Base */,
 				EF84C45A23230AE0006FDA35 /* en */,
 				EF84C45C23230AE6006FDA35 /* ru-RU */,
-				EF84C45F23230D5F006FDA35 /* en-US */,
 				EF84C46323230EBE006FDA35 /* uk */,
 			);
 			name = NotifSettingVC.xib;
@@ -946,7 +971,6 @@
 			children = (
 				EFF1E37323231128007D9E3E /* en */,
 				EFF1E3752323112E007D9E3E /* ru-RU */,
-				EFF1E3762323112F007D9E3E /* en-US */,
 				EFF1E37723231130007D9E3E /* uk */,
 			);
 			name = Localizable.strings;
@@ -1007,7 +1031,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1063,7 +1087,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1082,7 +1106,7 @@
 				CODE_SIGN_ENTITLEMENTS = KeskeseStaff/KeskeseStaff.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8F4UB334XT;
 				INFOPLIST_FILE = KeskeseStaff/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1090,12 +1114,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = Keskese.KeskeseStaff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1108,7 +1133,7 @@
 				CODE_SIGN_ENTITLEMENTS = KeskeseStaff/KeskeseStaff.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8F4UB334XT;
 				INFOPLIST_FILE = KeskeseStaff/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1116,11 +1141,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = Keskese.KeskeseStaff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

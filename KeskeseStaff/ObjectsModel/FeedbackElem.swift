@@ -18,4 +18,6 @@ struct FeedbackElem : Codable {
     var seen : Bool
     var name : String?
     var phone : String?
+    var emotion1 : String
+    var emotion2 : String
 }

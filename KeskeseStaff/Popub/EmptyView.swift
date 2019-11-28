@@ -44,6 +44,10 @@ class EmptyView: UIView {
         view.isHidden = false
     }
     
+    func appVersion(view : UIView){
+        mainLabel.text = NSLocalizedString("Update your application", comment: "")
+        view.isHidden = false
+    }
     
     @IBAction func reloadBtn(_ sender: Any) {
 

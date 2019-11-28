@@ -63,6 +63,9 @@ func tableStatuses(type : String, view : UIView, statys : UILabel, seen : Bool, 
         case "\(TABLE_STATUSES.CARD_OUT)" :
             statys.text = NSLocalizedString("PayCard", comment: "")
             seenView(view: view, seen: seen, color: Color.red, button: button)
+        case "\(TABLE_STATUSES.DISH_READY)" :
+            statys.text = "Заказ готов"
+            seenView(view: view, seen: seen, color: Color.orange, button: button)
         default:
             seenView(view: view, seen: seen, color: Color.dark, button: button)
         }
@@ -88,6 +91,26 @@ func waiterNotifs(type : String, view : UIView, statys : UILabel, seen : Bool , 
     
 }
 
+func getTableStatusChef(tableStatus: String) -> String{
+    switch (tableStatus){
+        
+    case "\(TABLE_STATUSES.DISH_READY)" :
+        return "Заказ готов"
+//    case "\(TABLE_STATUSES.WAITER_CALL)" :
+//        return NSLocalizedString("CallW", comment: "")
+//    case "\(TABLE_STATUSES.ADMIN_CALL)":
+//        return NSLocalizedString("CallA", comment: "")
+//    case "\(TABLE_STATUSES.CARD_OUT)" :
+//        return NSLocalizedString("PayCard", comment: "")
+//    case "\(TABLE_STATUSES.CASH_OUT)" :
+//        return NSLocalizedString("PayC", comment: "")
+//    case "\(TABLE_STATUSES.NOT_EMPTY)" :
+//        return NSLocalizedString("Busy", comment: "")
+    default:
+        return NSLocalizedString("Free", comment: "")
+    }
+}
+
 func getTableStatus(tableStatus: String) -> String{
     switch (tableStatus){
         
@@ -108,6 +131,27 @@ func getTableStatus(tableStatus: String) -> String{
     }
 }
 
+func getCardColorChef(tableStatus: String) -> UIColor{
+        switch (tableStatus){
+        case "\(TABLE_STATUSES.NEW_ORDER)" :
+            return Color.yellow
+//        case "\(TABLE_STATUSES.WAITER_CALL)",
+//        "\(TABLE_STATUSES.ADMIN_CALL)":
+//            return Color.yellow
+//        case "\(TABLE_STATUSES.CARD_OUT)",
+//        "\(TABLE_STATUSES.CASH_OUT)" :
+//            return Color.red
+//        case "\(TABLE_STATUSES.NOT_EMPTY)" :
+//            return hexStringToUIColor(hex: "#424242")
+//
+//        case "\(TABLE_STATUSES.DISH_READY)" :
+//            return Color.green
+//
+        default:
+            return UIColor.black
+    }
+}
+
 func getCardColor(tableStatus: String) -> UIColor{
         switch (tableStatus){
         case "\(TABLE_STATUSES.NEW_ORDER)" :
@@ -120,8 +164,26 @@ func getCardColor(tableStatus: String) -> UIColor{
             return Color.red
         case "\(TABLE_STATUSES.NOT_EMPTY)" :
             return hexStringToUIColor(hex: "#424242")
+            
+        case "\(TABLE_STATUSES.DISH_READY)" :
+            return Color.green
+            
         default:
             return UIColor.black
+    }
+}
+
+func getEmotionForFeedback(emotion: String) -> String{
+    
+    switch (emotion){
+    case "\(EMOJI.HAPPY)" :
+        return "😁"
+    case "\(EMOJI.OKAY)":
+        return "🙂"
+    case "\(EMOJI.SAD)":
+        return "😡"
+    default:
+        return ""
     }
 }
 

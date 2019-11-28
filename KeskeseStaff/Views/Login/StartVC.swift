@@ -7,10 +7,13 @@
 //
 
 import UIKit
-
+import Alamofire
+import UserNotifications
 class StartVC: UIViewController {
 
     @IBOutlet var emptyView: EmptyView!
+    
+    var appV : AppVersion?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,16 +21,7 @@ class StartVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("0")
-        emptyView.reloadBtn.addTarget(self, action: #selector(refreshPage), for: .touchUpInside)
-        if PreferenceUtils.username != ""{
-            print("1")
-            self.getUser()
-            
-        } else {
-            print("2")
-            performSegue(withIdentifier: "startToReg", sender: nil)
-        }
+        getVersion()
     }
     
     func getUser(){
@@ -47,6 +41,8 @@ class StartVC: UIViewController {
             }
         }
     }
+    
+    
     
     func getStaff(userId : Int){
         KeskeseStaff.getStaff(userID: userId).responseJSON{
@@ -78,6 +74,42 @@ class StartVC: UIViewController {
         }
     }
     
+    func getVersion(){
+            getAppVersion().responseJSON{
+                (response) in
+                switch response.result {
+                case .success(_):
+                    
+                    self.appV = response.data!.createList(type: AppVersion.self).last
+                    if (self.appV?.isLower())!{
+                        self.emptyView.appVersion(view: self.emptyView)
+                        
+                    } else {
+                        print("0")
+                        self.emptyView.reloadBtn.addTarget(self, action: #selector(self.refreshPage), for: .touchUpInside)
+                        if PreferenceUtils.username != ""{
+                            print("1")
+                            self.getUser()
+                            
+                        } else {
+                            print("2")
+                            self.performSegue(withIdentifier: "startToReg", sender: nil)
+                        }
+                    }
+                    
+                    
+                    break
+                case .failure(let error):
+    //                self.View.stopAnimating()
+                    self.emptyView.internetProblrms(view: self.emptyView)
+                    self.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
+                    print(error)
+                    break
+                }
+            }
+            
+        }
+    
     func staffType(type : String){
         print(type)
         if type == "\(STAFF_STATUSES.ADMIN)"{
@@ -88,6 +120,9 @@ class StartVC: UIViewController {
             
             performSegue(withIdentifier: "startToGuest", sender: nil)
 //            logVC.staffType = "waiter"
+            userType = NSLocalizedString("Waiter", comment: "")
+        } else if type == "\(STAFF_STATUSES.CHEF)"{
+            performSegue(withIdentifier: "startToChef", sender: nil)
             userType = NSLocalizedString("Waiter", comment: "")
         }
     }

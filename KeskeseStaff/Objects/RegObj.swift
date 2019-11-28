@@ -134,6 +134,9 @@ class RegObj: NSObject {
         } else if type == "\(STAFF_STATUSES.WAITER)"{
             logVC.staffType = "waiter"
             userType = NSLocalizedString("Waiter", comment: "")
+        } else if type == "\(STAFF_STATUSES.CHEF)"{
+            logVC.staffType = "Chef"
+            userType = NSLocalizedString("Waiter", comment: "")
         }
     }
 }

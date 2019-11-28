@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
         Messaging.messaging().delegate = self
         
         keyboard()
+        
         return true
     }
 

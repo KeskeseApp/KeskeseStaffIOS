@@ -30,6 +30,7 @@ class NotifSettingVC: UIViewController {
             case .success(_):
                 print("zoibav \(self.highRateSwitch.isOn)")
                 self.settings = response.data!.createList(type: StaffSettings.self)[0]
+                
                 self.setSettings()
                 break
             case .failure(let error):
@@ -41,10 +42,9 @@ class NotifSettingVC: UIViewController {
     }
     
     func setSettings(){
-        highRateSwitch.isOn = settings.high_stars
-        lowRateSwitch.isOn = settings.low_stars
-        joinShiftSwitch.isOn = settings.join_schedule
-        leftShiftSwich.isOn = settings.leave_schedule
+        highRateSwitch.isOn = settings.waiter_call
+        lowRateSwitch.isOn = settings.admin_call
+        joinShiftSwitch.isOn = settings.cash_out
     }
     
     func patchSettings(){
@@ -67,11 +67,13 @@ class NotifSettingVC: UIViewController {
     
     
     @IBAction func doneBtn(_ sender: Any) {
-        settings.high_stars = highRateSwitch.isOn
-        
-        settings.low_stars = lowRateSwitch.isOn
-        settings.join_schedule = joinShiftSwitch.isOn
-        settings.leave_schedule = leftShiftSwich.isOn
+        settings.admin_call = lowRateSwitch.isOn
+        settings.cash_out = joinShiftSwitch.isOn
+        settings.waiter_call = highRateSwitch.isOn
+    
+        print(self.highRateSwitch.isOn)
+        print(self.lowRateSwitch.isOn)
+        print(self.joinShiftSwitch.isOn)
         
         patchSettings()
         

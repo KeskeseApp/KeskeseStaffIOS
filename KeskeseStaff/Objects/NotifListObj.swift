@@ -15,10 +15,41 @@ class NotifListObj: NSObject{
     
     func getDataForStaff(){
         
-        getNotifListForStaff(userID : user!.id!).responseJSON{
+//        getNotifListForStaff(userID : user!.id!).responseJSON{
+//            (response) in
+//            switch response.result {
+//            case .success(_):
+//                var notifs = response.data!.createList(type: NotifGuest.self).sorted(by: { $0.id > $1.id})
+//
+//                notifs.sort(by: { !$0.seen && $1.seen})
+//
+//
+//                self.View.notifList.removeAll(keepingCapacity: false)
+//                for notif in notifs{
+//                    self.View.notifList.append(notif)
+//                }
+//
+//                self.View.stopAnimating()
+//                self.View.reloadList()
+//
+//                self.View.tableView.reloadData()
+//                break
+//            case .failure(let error):
+//                self.View.stopAnimating()
+//                self.View.Activity.stopAnimating()
+//                self.View.emptyV.internetProblrms(view: self.View.emptyV)
+//                self.View.view.makeToast("Произошла ошибка загрузки, попробуйте еще раз")
+//                print(error)
+//                break
+//            }
+//        }
+        
+        getAllNotifListForStaff(spotID: spot.id).responseJSON{
             (response) in
             switch response.result {
             case .success(_):
+                self.View.notifList = response.data!.createList(type: NotifGuest.self).sorted(by: { $0.id > $1.id})
+                
                 var notifs = response.data!.createList(type: NotifGuest.self).sorted(by: { $0.id > $1.id})
                 
                 notifs.sort(by: { !$0.seen && $1.seen})
@@ -29,9 +60,10 @@ class NotifListObj: NSObject{
                     self.View.notifList.append(notif)
                 }
 
-                self.View.stopAnimating()
+//                self.AdminNotifView.stopAnimating()
                 self.View.reloadList()
-    
+                                self.View.stopAnimating()
+//                self.AdminNotifView.Activity.stopAnimating()
                 self.View.tableView.reloadData()
                 break
             case .failure(let error):
@@ -43,6 +75,8 @@ class NotifListObj: NSObject{
                 break
             }
         }
+        
+        
     }
     
     func getData(){
@@ -55,7 +89,7 @@ class NotifListObj: NSObject{
                 
                 var notifs = response.data!.createList(type: NotifGuest.self).sorted(by: { $0.id > $1.id})
                 
-                notifs.sort(by: { !$0.seen && $1.seen})
+                notifs.sort(by: {!$0.seen && $1.seen})
                 
 
                 self.AdminNotifView.notifList.removeAll(keepingCapacity: false)

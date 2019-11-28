@@ -64,20 +64,26 @@ class NotiffVC: UIViewController, UITableViewDelegate , UITableViewDataSource , 
         let data = notifList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotifCell", for: indexPath) as!  NotifCell
         animate(cell: cell)
-        cell.indexLbl.text = String(data.table.number)
+        if data.table?.number != nil{
+            cell.indexLbl.text = String(data.table?.number ?? 0)
+        } else {
+            cell.indexLbl.text = "K"
+        }
+        
         cell.timeLbl.text = data.time
 //        cell.typeLbl.text = data.type
         tableStatuses(type: data.type, view: cell.BG, statys: cell.statysLbl, seen: data.seen, button: cell.confirmBtn)
         cell.indexBG.borderColorV = cell.BG.borderColorV
-        cell.confirmBtn.tag = indexPath.row
-        
-        if data.seen{
-            cell.confirmBtn.setTitle(NSLocalizedString("Close order", comment: "") , for: .normal)
-        } else {
-            cell.confirmBtn.setTitle(NSLocalizedString("Seen", comment: ""), for: .normal)
-        }
-        
-        cell.confirmBtn.addTarget(self, action: #selector(confirmBtn(sender:)), for: .touchUpInside)
+        cell.confirmBtn.isHidden = true
+//        cell.confirmBtn.tag = indexPath.row
+//        
+//        if data.seen{
+//            cell.confirmBtn.setTitle(NSLocalizedString("Close order", comment: "") , for: .normal)
+//        } else {
+//            cell.confirmBtn.setTitle(NSLocalizedString("Seen", comment: ""), for: .normal)
+//        }
+//        
+//        cell.confirmBtn.addTarget(self, action: #selector(confirmBtn(sender:)), for: .touchUpInside)
         
         return cell
     }
@@ -130,7 +136,7 @@ class NotiffVC: UIViewController, UITableViewDelegate , UITableViewDataSource , 
             // add the actions (buttons)
             alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {action in
                 self.startAnimating(type : NVActivityIndicatorType.ballPulseSync)
-                unassignTable(old_staff_id: staff.id!, table_id: data.table.id)
+                unassignTable(old_staff_id: staff.id!, table_id: data.table?.id ?? 0)
                     .responseJSON{
                         (response) in
                         switch response.result {
